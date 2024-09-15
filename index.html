@@ -13,6 +13,7 @@
   <body>
     <div id="root"></div>
     <script>
+      const DEFAULT_THEME = 'dark';
       // prevents FOUC (flash of unstyled content) (dark mode flashing white upon page load since css loads slowly)
       const localTheme = localStorage.getItem('crystaltine-site-theme');
       if (localTheme) {
