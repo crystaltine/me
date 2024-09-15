@@ -19,7 +19,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 		import(`../content/projects/images/${props.image}.png`).then((image) => {
 			setImage(image.default);
 		}).catch(() => {
-			fetch("https://placehold.co/300x200").then((res) => {
+			fetch("https://placehold.co/400x300").then((res) => {
 				setImage(res.url);
 			})});
 		}, [props.image]);

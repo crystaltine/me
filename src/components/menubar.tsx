@@ -20,9 +20,9 @@ interface MenubarProps {
  */
 const MENUBAR_LINKS = {
   "Experience": ["/", experienceIcon],
-  "Projects": ["/projects", projectsIcon],
-  "Art": ["/art", artIcon],
-  "Resume": ["/resume", resumeIcon],
+  "Projects": ["/me/#/projects", projectsIcon],
+  "Art": ["/me/#/art", artIcon],
+  "Resume": ["/me/#/resume", resumeIcon],
 }
 
 function MenubarLink(props: {text: string, icon: string, href: string, curr?: boolean}) {
