@@ -39,7 +39,18 @@ export const Popup = (props: Partial<IPopupProps>) => {
         onMouseDown={(e) => e.stopPropagation()}
         className={`${props.extraClassString || ''} ${props.noIncludeBody? '' : 'popup-body'}`}
         style={props.outerStyle}>
+
           {props.children}
+
+          <div className='w-full'>
+            <button 
+            className='button-primary button-medium popup-close-btn' 
+            onClick={(e) => { 
+              e.stopPropagation();
+              props.onClose?.();
+            }}>Close</button>
+          </div>
+
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Menubar from "../components/menubar";
 import Footer from "../components/footer";
 
-import '../styles/general/generics.css'
+import '../styles/general/pages.css';
 
 interface GenericPageProps {
   useExpandableClass?: boolean;
@@ -24,10 +24,11 @@ export const GenericPage = (props: GenericPageProps) => {
       height: props.noMenubar? '100vh' : undefined,
     }}>
 
-      {!(props.noMenubar) &&
-        <Menubar selected={props.selected} />}
-
-      {props.children}
+      {!(props.noMenubar) && <Menubar selected={props.selected} />}
+      
+      <div className="generic-page-fadein">
+        {props.children}
+      </div>
 
       {!(props.noIncludeFooter===true) && <Footer />}
 

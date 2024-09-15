@@ -1,0 +1,35 @@
+[
+	{
+		"sectionId": "research-lanl",
+		"title": "Los Alamos National Laboratory",
+		"role": "Research Intern",
+		"dates": "Jun. 2023 - Oct. 2023",
+		"location": "Remote",
+		"tags": ["research", "python", "pytorch", "numpy"],
+		"overview": "Assisted Li Tang, Ph. D at Los Alamos National Laboratory on vectorization of tensor-related operations in the Polybench benchmark suite and other algorithms using PyTorch and Numpy.<br /><br />Developed new graph representations, achieved speed increases of up to 20x for algorithms such as BFS, Finite-difference time-domain (FDTD-2d), and Cholesky decomposition compared to non-vectorized traditional implementations.<br /><br />Gained practical experience in scientific and high-performance computing.",
+		"descFile": "research-lanl",
+		"image": "research-lanl"
+	},
+	{
+		"sectionId": "dev-floracosm",
+		"title": "Floracosm",
+		"role": "Full-stack Developer",
+		"dates": "Jul. 2023 - Present",
+		"location": "Sammamish, WA",
+		"tags": ["full-stack", "typescript", "react", "express", "azure", "sql-server", "nodejs", "ux", "ui"],
+		"overview": "Floracosm is an exploratory crowdfunding website I made as a personal project, developed between August 2023 to November 2023. The theoretical premise of the website is to provide a minor incentive to donating to charity by allowing users to contribute images to an annual global mural.<br /><br />This was my first large-scale web application that included client, server, and database logic. I learned a lot about the process of full-stack web development and system design - from responsive design to REST APIs to cloud deployment.<br /><br />While I never advertised the project or spread any awareness about it, building Floracosm laid a foundation for me in web development and showed me that I really enjoy it! I'm glad I was able to create a presentable modern website, and reflect positively on my experience.",
+		"descFile": "dev-floracosm",
+		"image": "dev-floracosm"
+	},
+	{
+		"sectionId": "stu-jsti",
+		"title": "JSTI West 2023",
+		"role": "Student Researcher",
+		"dates": "Jun. 2023",
+		"location": "Albuquerque, NM",
+		"tags": ["python", "pytorch", "numpy"],
+		"overview": "<a href=\"https://orise.orau.gov/jstiwest/\" target=\"_blank\" rel=\"noopener noreferrer\" onclick=\"(e) => { console.log(`wtfffff`); e.stopPropagation() }\"}>JSTI West</a> is an all-expenses-paid research program organized by ORISE (Oak Ridge Institute for Science and Education) and DTRA (Defense Threat Reduction Agency) consisting of 36 students from around the United States.<br /><br />As part of the Tracer Advection in Ocean Modeling group, I and my research team developed a mesh modeling framework alongside a mentor from Los Alamos National Laboratory.<br /><br />I also, as a personal side-deliverable, applied our framework to build proof-of-concept weather forecast tool.<br /><br />Developed collaborative skills and project management in a formal research setting.",
+		"descFile": "stu-jsti",
+		"image": "stu-jsti"
+	}
+]

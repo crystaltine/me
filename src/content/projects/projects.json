@@ -1,0 +1,84 @@
+[
+	{
+		"title": "Pixelterm",
+		"desc": "Terminal/ASCII Graphics Rendering Library",
+		"tags": ["python", "graphics", "frameworks", "numpy", "git"],
+		"image": "pixelterm_preview",
+		"links": {
+			"Github": "https://Github.com/crystaltine/pixelterm",
+			"PyPI": "https://pypi.org/project/pixelterm/"
+		}
+	},
+	{
+		"title": "Wordfish",
+		"desc": "Discord Message & Activity Trends Visualizer",
+		"tags": ["python", "ux"],
+		"image": "wordfish_preview",
+		"links": {
+			"Github": "https://Github.com/crystaltine/wordfish"
+		}
+	},
+	{
+		"title": "React-Vite Template",
+		"desc": "Pre-styled Website Boilerplate",
+		"tags": ["react", "typescript", "ui", "ux"],
+		"image": "react-vite-template_preview",
+		"links": {
+			"Github": "https://github.com/crystaltine/template-react-vite"
+		}
+	},
+	{
+		"title": "MDE",
+		"desc": "Code editor and compiler in Minecraft",
+		"tags": ["java"],
+		"image": "mde_preview",
+		"links": {
+			"Github": "https://Github.com/crystaltine/MDE"
+		}
+	},
+	{
+		"title": "Windows -1",
+		"desc": "Basic Browser-based Windows Desktop with Persistent File System",
+		"tags": ["react", "javascript", "ui"],
+		"image": "windows-1_preview",
+		"links": {
+			"Github": "https://github.com/crystaltine/windowsminus1",
+			"Website": "https://crystaltine.github.io/windowsminus1/"
+		}
+	},
+	{
+		"title": "Kiloblitz",
+		"desc": "WIP Chess Engine Tournament Site",
+		"tags": ["react", "full-stack", "nodejs", "sql-server", "azure", "express", "ui", "ux"],
+		"image": "kiloblitz_preview",
+		"links": {}
+	},
+	{
+		"title": "PieceItTogether",
+		"desc": "Wordle-like Chess Position Guessing Game",
+		"tags": ["react", "typescript", "ui", "ux"],
+		"image" : "pieceittogether_preview",
+		"links": {
+			"Github": "https://github.com/crystaltine/pieceittogether",
+			"Website": "https://crystaltine.github.io/PieceItTogether/"
+		}
+	},
+	{
+		"title": "EndRaceDM",
+		"desc": "SpigotMC Minecraft Minigame Plugin",
+		"tags": ["java"],
+		"image": "endracedm_preview",
+		"links": {
+			"Github": "https://Github.com/crystaltine/endracedm"
+		}
+	},
+	{
+		"title": "Flint",
+		"desc": "Lightweight Text and Code Editor",
+		"tags": ["react", "electron", "typescript", "ui", "ux"],
+		"image": "flint_preview",
+		"links": {
+			"Github": "https://Github.com/crystaltine/flint"
+		}
+	}
+]

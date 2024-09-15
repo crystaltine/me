@@ -1,0 +1,97 @@
+{
+  "python": {
+    "name": "Python",
+    "color": "#3776ab",
+    "icon": "python.png"
+  },
+  "javascript": {
+    "name": "JavaScript",
+    "color": "#f0db4f",
+    "icon": "javascript.png"
+  },
+  "typescript": {
+    "name": "TypeScript",
+    "color": "#007acc",
+    "icon": "typescript.png"
+  },
+	"java": {
+    "name": "Java",
+    "color": "#eeae96",
+    "icon": "java.png"
+  },
+	"react": {
+    "name": "React",
+    "color": "#61dafb",
+    "icon": "react.png"
+  },
+	"numpy": {
+    "name": "Numpy",
+    "color": "#013243",
+    "icon": "numpy.png"
+  },
+  "pytorch": {
+    "name": "PyTorch",
+    "color": "#49586b",
+    "icon": "pytorch.png"
+  },
+	"full-stack": {
+    "name": "Full-Stack Dev",
+    "color": "#ba00c0",
+    "icon": "full-stack.png"
+  },
+	"sql-server": {
+    "name": "MS SQL Server",
+    "color": "#0b00a2",
+    "icon": "mssql.png"
+  },
+  "nodejs": {
+    "name": "Node.js",
+    "color": "#2ba222",
+    "icon": "nodejs.png"
+  },
+  "azure": {
+    "name": "Microsoft Azure",
+    "color": "#0b60ff",
+    "icon": "azure.png"
+  },
+  "ux": {
+    "name": "UX",
+    "color": "#4213bb",
+    "icon": "ux.png"
+  },
+  "ui": {
+    "name": "UI",
+    "color": "#8033f5",
+    "icon": "ui.png"
+  },
+  "graphics": {
+    "name": "Graphics",
+    "color": "#717181",
+    "icon": "graphics.png"
+  },
+  "frameworks": {
+    "name": "Frameworks",
+    "color": "#d45029",
+    "icon": "frameworks.png"
+  },
+  "git": {
+    "name": "Git",
+    "color": "#111112",
+    "icon": "git.png"
+  },
+  "express": {
+    "name": "Express",
+    "color": "#b52443",
+    "icon": "express.png"
+  },
+  "electron": {
+    "name": "Electron",
+    "color": "#99e7ff",
+    "icon": "electron.png"
+  },
+  "research": {
+    "name": "Research",
+    "color": "#ff8c00",
+    "icon": "research.png"
+  }
+}

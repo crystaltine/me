@@ -1,0 +1,41 @@
+<h3>Overview</h3>
+<p>
+	JSTI West is an all-expenses-paid research program organized by 
+	<a href="https://orise.orau.gov/" rel="noopener noreferrer" target="_blank">ORISE (Oak Ridge Institute for Science and Education)</a> 
+	and <a href="https://www.dtra.mil/" rel="noopener noreferrer" target="_blank">DTRA (Defense Threat Reduction Agency)</a> 
+	consisting of 36 students from around the United States.
+	<br /><br />
+	As part of the Tracer Advection in Ocean Modeling group, I and my research team developed a mesh modeling framework alongside a mentor from Los Alamos National Laboratory.
+	<br /><br />
+	I also, as a personal side-deliverable, applied our framework to build proof-of-concept weather forecast tool.
+</p>
+
+<h3>Results</h3>
+<p>
+	We created meshops, a mesh modeling framework capable of simulating the advection of heat and other quantites through a fluid represented by a mesh or tensor.
+	<br /><br />
+	While the framework was very rudimentary (see Constraints & Challenges below), I developed a very simple web application that showcased the calculations
+	made by the framework on prefetched temperature data across major U.S. cities. Looking back, I could have included a server side to run calculations on live
+	data obtained from an API like <a href="https://openweathermap.org/" rel="noopener noreferrer" target="_blank">OpenWeatherMap</a>, but I did not have enough
+	time to implement this feature due to the relatively short time constraints of the program.
+	<br /><br />
+	To conclude the program, we presented our work to a group of LANL scientists, New Mexico government officials, and DTRA representatives.
+</p>
+
+<h3>Constraints & Challenges</h3>
+<p>
+	The biggest problem I faced was that the program is only 2 weeks long.
+	Additionally, our team had vastly diverse programming experience, meaning I had to allocate a portion of my time to
+	helping everyone understand our ideas and initiatives.
+	<br /><br />
+	We also spent the first couple days tweaking the project scope and goals. I had to consider everyone's interests
+	and capability to contribute, as well as making sure the project was at least somewhat unique and not just a rewrite
+	of some pre-existing program. In the end, we settled on creating a modeling library (built on top of PyTorch).
+</p>
+
+<h3>Takeaways</h3>
+<p>
+	I thoroughly enjoyed the experience and cherished the relationships I made not only with my team members, but with the other teams as well.
+	This was an introductory research experience for me, and though I would have liked more structure in our development
+	process and more time to explore, I believe JSTI significantly improved my project management and practical collaboration skills in diverse groups.
+</p>

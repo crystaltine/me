@@ -1,0 +1,18 @@
+.icon-link-icon {
+	filter: opacity(0.8);
+	display: inline;
+	height: 1em;
+	vertical-align: middle;
+	line-height: 0;
+}
+.theme-dark .icon-link-icon {
+	filter: invert(1) opacity(0.8);
+}
+.icon-link-a {
+	color: rgba(var(--textColor), 0.6);
+	line-height: 1.2;
+	display: inline;
+	margin-left: 0.4rem;
+	vertical-align: middle;
+	text-decoration: none;
+}

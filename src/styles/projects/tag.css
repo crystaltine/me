@@ -1,0 +1,8 @@
+.project-page-tag {
+	display: inline;
+	font-size: 0.9em;
+	font-weight: 600;
+	padding: 0.05em 0.75em;
+	border-width: 1px;
+	border-radius: 1000px;
+}

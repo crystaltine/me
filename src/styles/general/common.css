@@ -1,0 +1,125 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.page-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: var(--largerElementWidth);
+	margin: 0 auto;
+	margin-top: var(--pagePaddingY);
+}
+.page-hero-graphic {
+	width: 100%;
+	animation: fadeIn 0.3s;
+	animation-delay: 0.2s;
+	animation-fill-mode: backwards;
+	margin: -5% auto;
+}
+@media screen and (max-width: 500px) {
+	.page-hero-graphic {
+		margin-bottom: 0 !important;
+	}
+}
+@media screen and (max-width: 500px) {
+	.page-hero {
+		width: 100vw;
+	}
+	.page-hero-graphic {
+		width: 100vw !important;
+		max-width: 100vw;
+	}
+	.page-hero-title {
+		text-align: center;
+		line-height: 1.2;
+	}
+	.page-hero-title-muted {
+		display: block;
+		width: 100%;
+	}
+}
+
+.page-hero-title {
+	font-size: max(min(4rem, 8vw), 2.5rem);
+	animation: fadeIn 0.3s;
+	animation-delay: 0.4s;
+	animation-fill-mode: backwards;
+	max-width: 100%;
+	overflow: hidden;
+	text-wrap: wrap;
+	line-height: 1.1;
+}
+.page-hero-title-muted {
+	font-family: var(--codeFont);
+	color: rgba(var(--textColor), 0.3);
+	font-weight: 400;
+}
+
+.page-hero-icon {
+	padding: min(1.5rem, 4vw);
+	height: min(8rem, 20vw);
+	border-radius: var(--roundedXL);
+	box-sizing: border-box;
+	pointer-events: none;
+	z-index: 20;
+	animation: rotateIn 0.6s;
+	animation-fill-mode: backwards;
+}
+.theme-light .page-hero-icon {
+	border: 1px solid rgb(var(--secondaryColor0), 0.5);
+	box-shadow: 0 30px 80px -30px rgba(var(--primaryColor2), 0.3), 0 50px 80px -70px rgba(var(--primaryColor0), 0.2) inset;
+}
+.theme-dark .page-hero-icon {
+	border: 1px solid rgb(var(--secondaryColor0), 0.25);
+	box-shadow: 0 20px 80px -20px rgba(var(--primaryColor4)), 0 50px 80px -70px rgba(var(--primaryColor0), 0.3) inset;
+}
+
+.page-separator {
+	margin: min(4rem, 6vh) auto;
+	width: var(--largerElementWidth);
+}
+@media screen and (max-width: 500px) {
+	.page-separator {
+		margin: 4vh auto !important;
+	}
+}
+
+/* boxed text looks kinda similar to input */
+.boxedtext-primary {
+	width: fit-content;
+  font-family: var(--paragraphFont);
+  color: rgb(var(--textColor));
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.5em 2em;
+  box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+  border-radius: var(--roundedMedium);
+  border: 2px solid transparent;
+  outline: 1px solid rgba(var(--secondaryColor1), 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease, outline-color 0.15s ease;
+}
+@media screen and (max-width: 500px) {
+	.boxedtext-primary {
+		text-align: center;
+	}
+}
+.theme-dark .boxedtext-primary {
+  background-color: rgb(var(--backgroundColor3));
+}
+.theme-light .boxedtext-primary {
+  background-color: rgb(var(--backgroundColor1));
+}
+.boxedtext-primary:hover {
+  outline: 1px solid rgba(var(--secondaryColor1), 0.9);
+}

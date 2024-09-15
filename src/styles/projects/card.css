@@ -1,0 +1,52 @@
+.project-page-card {
+	font-size: 0.9rem;
+	padding: 1.4rem;
+	border-radius: var(--roundedXL);
+	transition: border 0.2s, box-shadow 0.4s;
+	border: 1px solid rgba(var(--secondaryColor0), 0.2);
+}
+@media screen and (max-width: 750px) {
+	/* triggers at 750 which is when the masonry
+	is set to change to 1 column instead of 2 */
+	.project-page-card {
+		text-align: center;
+	}
+	.card-tags-container {
+		justify-content: center;
+	}
+}
+.theme-dark .project-page-card {
+	background-color: rgba(var(--backgroundColor2), 0.5);
+	box-shadow: 0 30px 90px -50px rgba(var(--primaryColor0), 0.2);
+}
+.theme-light .project-page-card:hover {
+	border: 1px solid rgba(var(--secondaryColor0), 0.5);
+	background-color: rgba(var(--backgroundColor2), 0.5);
+}
+.theme-dark .project-page-card:hover {
+	border: 1px solid rgba(var(--secondaryColor0), 0.3);
+	background-color: rgba(var(--backgroundColor3), 0.5);
+	box-shadow: 0 30px 90px -50px rgba(var(--primaryColor0), 0.7);
+}
+
+.card-preview {
+	border-radius: var(--roundedXL);
+	margin-bottom: 0.8em;
+}
+
+.card-title {
+	font-size: 1.8em;
+	margin: 0;
+}
+.card-desc {
+	margin: 0;
+	color: rgba(var(--textColor), 0.7);
+}
+
+.card-tags-container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.4em;
+	margin: 0.8em 0;
+}

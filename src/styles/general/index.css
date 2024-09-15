@@ -5,7 +5,9 @@
 
 /* Document-wide theme-independent constant variables */
 body {
-  --genericPageWidth: min(85%, 1100px);
+  --genericElementWidth: min(80%, 1080px);
+  --largerElementWidth: min(85%, 1300px);
+  --w90ElementWidth: min(90%, 1300px); /* used when screen width is very narrow */
   --pagePaddingY: min(100px, 10%);
 
   --displayFont: "Figtree", "Wix Madefor Display", "Satoshi", "Red Hat Display", Roboto, system-ui, sans-serif;
@@ -15,6 +17,7 @@ body {
   --roundedSmall: 5px;
   --roundedMedium: min(2vmin, 8px);
   --roundedLarge: 10px;
+  --roundedXL: 15px;
 }
 
 /* Main dark theme colors - look in other files menubar.css for other colors */
@@ -36,7 +39,7 @@ body {
   --secondaryColor0: 176, 177, 192;
   --secondaryColor1: 131, 135, 145;
 
-  --textColor: 255, 255, 255;
+  --textColor: 252, 252, 253;
   --linkColor: 191, 99, 244;
 }
 
@@ -67,21 +70,25 @@ body {
   font-family: var(--paragraphFont);
   font-size: 16px;
   margin: 0;
-  background-color: rgb(var(--backgroundColor0));
   color: rgb(var(--textColor));
+  background-size: cover;
+  background-color: rgb(var(--backgroundColor0));
 }
 
 /* For smooth transitioning between light-dark themes.
 This is a very low priority selector so it shouldnt
 interfere with other animated elements as long as they override. */
 .theme-light *, .theme-dark * {
-  transition: background 0.3s ease; 
+  transition: background 0.3s ease, backdrop-filter 0.3s ease; 
   /* ???: for some reason, color transitions take 10x longer, hence 0.03 instead of 0.3 */
 }
+
 
 /* root element defined in index.html */
 #root {
   height: calc(100vh - var(--menuBarHeight));
+  max-height: calc(100vh - var(--menuBarHeight));
+  background-color: rgb(var(--backgroundColor0));
 }
 
 /* reset default/standard styles for text elements */
@@ -163,22 +170,38 @@ a:hover {
   background-color: rgba(var(--primaryColor0), 0.5);
 }
 
+.text-accent {
+  color: rgb(var(--primaryColor2));
+}
+
+/* general main section sizing styles */
+.section-medium {
+  width: var(--genericElementWidth);
+  margin: 0 auto;
+}
+.section-lg {
+  width: var(--largerElementWidth);
+  margin: 0 auto;
+}
+.section-bottom {
+  margin-bottom: var(--pagePaddingY);
+}
+
 /* classes for quick debugging */
 .red {
   background-color: rgba(255, 20, 20, 0.4) !important;
-  border: 5px solid rgb(235, 154, 154) !important;
 }
 .blue {
   background-color: rgba(20, 20, 255, 0.4) !important;
-  border: 5px solid rgb(179, 179, 245) !important;
+  outline: 3px solid rgb(179, 179, 245) !important;
 }
 .green {
   background-color: rgba(20, 255, 20, 0.4) !important;
-  border: 5px solid rgb(154, 235, 154) !important;
+  outline: 3px solid rgb(154, 235, 154) !important;
 }
 .yellow {
   background-color: rgba(255, 255, 20, 0.4) !important;
-  border: 5px solid rgb(235, 235, 154) !important;
+  outline: 3px solid rgb(235, 235, 154) !important;
 }
 
 .link {
@@ -192,9 +215,6 @@ a:hover {
 .link-invis {
   text-decoration: none;
   color: inherit;
-  width: fit-content;
-  padding: 0;
-  margin: 0;
 }
 .link-invis:hover {
   text-decoration: none !important;
@@ -205,6 +225,10 @@ a:hover {
   text-decoration: none;
   color: inherit;
   width: fit-content;
+}
+
+.text-muted {
+  color: rgba(var(--textColor), 0.6);
 }
 
 /* Prebuilt input element styles */
@@ -228,7 +252,7 @@ a:hover {
   background-color: rgb(var(--backgroundColor1));
 }
 .input-primary::placeholder {
-  color: rgba(var(--textColor), 0.5);
+  color: rgba(var(--textColor), 0.6);
 }
 .input-primary:hover {
   outline: 1px solid rgba(var(--secondaryColor1), 0.9);
@@ -249,51 +273,42 @@ button {
   box-sizing: border-box;
   max-width: fit-content; /* by default buttons dont fill, however this can be overridden */
 }
-.button-primary, .button-secondary, .button-danger {
+
+.button-primary, .button-secondary {
   border-radius: var(--roundedMedium);
-  font-weight: 500;
   font-family: var(--displayFont);
   border: none;
   outline: none;
-  cursor: pointer;
   transition: 0.15s;
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-/* All disabled button-primary */
-.button-primary[disabled], .button-danger[disabled], .button-secondary[disabled] {
+.button-primary[disabled], .button-secondary[disabled] {
   font-weight: 500;
-  border: none;
   outline: none;
   cursor: pointer;
   transition: 0.1s;
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  opacity: 0.6;
+  opacity: 0.5;
   box-shadow: none;
-  cursor: wait;
   pointer-events: none;
-}
-.button-danger[disabled] {
-  color: white;
-}
-.button-secondary[disabled] {
-  outline: 1px solid rgba(var(--textColor), 0.2);
-  color: rgb(var(--textColor));
-  background-color: transparent;
 }
 
 .button-primary {
   color: white;
   background-color: rgb(var(--primaryColor2));
-  box-shadow: 0px 1px 4px 1px #0003;
+  box-shadow: 0px 2px 5px -3px #0003;
 }
 .button-primary:hover {
   background-color: rgb(var(--primaryColor1));
   box-shadow: 0px 2px 5px 1px #0004;
+}
+.button-primary:active {
+  transition: background 0s;
+  background-color: rgb(var(--primaryColor0));
 }
 
 .button-secondary {
@@ -310,20 +325,30 @@ button {
   background-color: rgba(var(--backgroundColor3), 0.9);
   border: 1px solid rgb(var(--secondaryColor1), 0.9);
 }
+.theme-dark .button-secondary:active {
+  transition: background 0s;
+  background-color: rgba(var(--backgroundColor6), 1);
+  border: 1px solid rgb(var(--secondaryColor1), 1);
+}
+.theme-light .button-secondary:active {
+  transition: background 0s;
+  background-color: rgba(var(--backgroundColor5), 1);
+  border: 1px solid rgb(var(--secondaryColor1), 1);
+}
 
 .mopo {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .button-small {
-  padding: 5px 14px;
+  padding: 0.2em 1.2em;
   font-size: 1em;
 }
 .button-medium {
-  padding: 8px 24px;
+  padding: 0.4em 1.5em;
   font-size: 1em;
 }
 .button-large {
-  padding: 10px 28px;
+  padding: 0.6em 1.8em;
   font-size: 1em;
 }

@@ -1,0 +1,29 @@
+@media screen and (max-width: 700px) {
+	body {
+		--menubarPaddingX: calc((100vw - var(--largerElementWidth)) / 2) !important;
+	}
+	.menubar-page-title {
+		display: none;
+	}
+	.menubar-title-container {
+		font-size: 0.9rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		--pagePaddingY: min(150px, 15%) !important;
+	}
+	.menubar-title-text {
+		display: none;
+	}
+	.menubar-logo-img {
+		margin-right: 0 !important;
+	}
+	.menubar-title-container {
+		font-size: 0.9rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

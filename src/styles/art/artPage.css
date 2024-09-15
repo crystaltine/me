@@ -1,0 +1,64 @@
+/* Yes this is almost an exact duplicate of the project page css, 
+but im too lazy to create general styles and also this allows for
+customizing each page individually if i ever want to */
+
+@keyframes rotateIn {
+	0% {
+		transform: rotate(320deg) scale(1.2);
+		opacity: 0;
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+		opacity: 1;
+	}
+}
+
+.art-page-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	column-gap: 30px;
+}
+.art-hero-graphic {
+	width: 100%;
+	animation: fadeIn 0.3s;
+	animation-delay: 0.2s;
+	animation-fill-mode: backwards;
+}
+.art-hero-title {
+	margin-top: -4rem;
+	font-size: 4rem;
+	animation: fadeIn 0.3s;
+	animation-delay: 0.4s;
+	animation-fill-mode: backwards;
+}
+.art-hero-title-muted {
+	font-family: var(--codeFont);
+	color: rgba(var(--textColor), 0.3);
+	font-weight: 400;
+}
+
+.art-main-desc {
+	text-align: center;
+	width: min(900px, 80%);
+	max-width: var(--genericElementWidth);
+	color: rgba(var(--textColor), 0.6);
+	margin: 0 auto;
+	margin-top: 1rem;
+	animation: fadeIn 0.3s;
+	animation-delay: 0.6s;
+	animation-fill-mode: backwards;
+}
+@media screen and (max-width: 500px) {
+	.art-main-desc {
+		width: 100%;
+	}
+}
+
+.art-page-cards-container {
+	margin-top: 1rem;
+	animation: fadeIn 0.3s;
+	animation-delay: 0.8s;
+	animation-fill-mode: backwards;
+}

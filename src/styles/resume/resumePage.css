@@ -1,0 +1,112 @@
+/* Yes this is almost an exact duplicate of the project page css, 
+but im too lazy to create general styles and also this allows for
+customizing each page individually if i ever want to */
+
+@keyframes rotateIn {
+	0% {
+		transform: rotate(320deg) scale(1.2);
+		opacity: 0;
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+		opacity: 1;
+	}
+}
+
+.resume-hero-title-muted {
+	font-family: var(--codeFont);
+	color: rgba(var(--textColor), 0.3);
+	font-weight: 400;
+}
+
+.resume-main-desc {
+	text-align: center;
+	width: min(900px, 80%);
+	color: rgba(var(--textColor), 0.6);
+	margin: 0 auto;
+	margin-top: 1.5rem;
+	animation: fadeIn 0.3s;
+	animation-delay: 0.6s;
+	animation-fill-mode: backwards;
+}
+@media screen and (max-width: 500px) {
+	.resume-main-desc {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	/* vertically stack preview for small screens */
+	.resume-page-content {
+		display: flex !important;
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
+	.resume-preview-right {
+		border-left: none !important;
+		border-bottom: 1px solid rgba(var(--secondaryColor0), 0.3);
+		padding-left: 0;
+		padding-bottom: 40px;
+		padding-left: 0 !important;
+		text-align: center;
+	}
+	.resume-actions-container {
+		align-items: center;
+	}
+}
+
+.resume-page-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	animation: fadeIn 0.3s;
+	animation-delay: 0.8s;
+	animation-fill-mode: backwards;
+}
+
+.resume-preview-right {
+	border-left: 1px solid rgba(var(--secondaryColor0), 0.3);
+	padding-left: 40px;
+}
+
+.resume-preview-img {
+	width: 100%;
+	border: 1px solid rgb(var(--secondaryColor0), 0.5);
+	transition: box-shadow 0.3s ease; /* for theme changing */
+}
+.theme-dark .resume-preview-img {
+	box-shadow: 50px 30px 60px -30px rgba(var(--primaryColor2), 0.3);
+}
+.resume-preview-title {
+	font-size: 2.4rem;
+	margin: 0;
+}
+.resume-timestamp {
+	color: rgba(var(--textColor), 0.6);
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+.resume-actions-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.muted-icon {
+	display: inline;
+	vertical-align: middle;
+	line-height: 1;
+	font-size: 1em;
+	height: 1em;
+	opacity: 0.6;
+}
+.check-icon {
+	display: inline;
+	vertical-align: middle;
+	line-height: 1;
+	font-size: 1em;
+	height: 1em;
+	opacity: 1;
+}

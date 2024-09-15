@@ -1,0 +1,38 @@
+.fadein_0_6 {
+	animation: fadeIn 0.3s;
+	animation-delay: 0.6s;
+	animation-fill-mode: backwards;
+}
+
+.projects-main-desc {
+	text-align: center;
+	width: min(900px, 80%);
+	color: rgba(var(--textColor), 0.6);
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+@media screen and (max-width: 500px) {
+	.projects-main-desc {
+		width: 90%;
+	}
+	.project-page-tags-container {
+		max-width: 85%;
+	}
+}
+
+.project-page-tags-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin: 0 auto;
+	margin-top: 1.5rem;
+}
+
+.project-page-cards-container {
+	animation: fadeIn 0.3s;
+	animation-delay: 0.8s;
+	animation-fill-mode: backwards;
+}

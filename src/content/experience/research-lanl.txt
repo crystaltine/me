@@ -1,0 +1,36 @@
+<h3>Overview</h3>
+<p>
+	Worked with <a href="https://www.linkedin.com/in/li-tang-3a720427" rel="noopener noreferrer" target="_blank">Li Tang, Ph.D</a> at Los Alamos on vectorization and benchmarking of:
+	<br />- Operations the Polybench benchmark suite, including Finite-difference time-domain (FDTD-2d), Conv3D, and Cholesky decompositions.</li>
+	<br />- BFS for graphs of sizes ~ 4096-65536 nodes</li>
+</p>
+
+<h3>Polybench</h3> 
+<p>
+	Polybench is a collection of numerical computations from various application domains.
+	Its original functionality is implemented in C and Fortran. My goal was to vectorize 
+	these operations in a modern paradigm like Python using PyTorch and Numpy.
+	<br /><br />
+	Some computations are directly available in the PyTorch API, and for those, I implemented alternative
+	algorithms that averaged near the performace of the Pytorch functions, such as for LU decomposition, Conv3D, and Cholesky Decomposition operations.
+	<br /><br />
+	For some functions that are not included in PyTorch such as FDTD-2d, I achieved >1000x speedups against nonvectorized implementations.
+</p>
+
+<h3>BFS Vectorization</h3>
+<p>
+	Achieved BFS speed increases of up to 20x (10x average case) for n=65536, e=393216 graphs compared to non-vectorized traditional implementations. 
+	<br /><br />
+	Some tradeoffs: Constructing a vectorized graph from preloaded data takes slightly more time than the traditional graph.
+	<br /><br />
+	I had also begun testing a graph implementation using Python bitarrays, which I believe may have brought 
+	significant performance improvements. Unfortunately, I was unable to vectorize some necessary functions and 
+	thus was not able to run any performance tests on this implementation.
+</p>
+
+<h3>Takeways</h3>
+<p>
+Overall, I gained practical experience using PyTorch and Numpy to manipulate tensors and optimize procedures for use in scientific and high-performance computing. 
+I would like to thank Dr. Tang for generously agreeing to mentor me and for providing me with the 
+guidance I needed to work with these complex implementations and concepts!
+</p>

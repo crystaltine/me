@@ -1,0 +1,49 @@
+@media screen and (max-width: 900px) {
+	.homepage-hero-left {
+		width: 100%;
+	}
+	.homepage-hero-text {
+		text-align: center;
+		font-size: 0.9em;
+		width: 100%;
+		padding: min(2rem, 8vh) min(1.5rem, 6vw);
+		animation: homepage-bottom-flyin 0.9s ease !important;
+	}
+	.homepage-hero-2 {
+		width: 100%;
+		padding: min(1.5rem, 3vh) min(1rem, 3vw);
+		animation: homepage-bottom-flyin 0.9s ease !important;
+		animation-delay: 0.1s;
+		animation-fill-mode: backwards;
+	}
+	.homepage-hero-img {
+		margin: 0 auto;
+		right: 50%;
+		transform: translateX(50%);
+		animation: none !important;
+	}
+	.homepage-hero-main {
+
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.hero-maintext {
+		font-size: 3rem !important;
+	}
+	.homepage-lg-icons-container {
+		row-gap: min(2rem, 3vh);
+		column-gap: min(2rem, 2vw);
+	}
+}
+
+/* 34rem should be min width of horizontal hero 2 */
+@media screen and (max-width: 550px) {
+	.homepage-lg-icons-container {
+		grid-template-columns: repeat(2, 1fr) !important;
+		grid-template-rows: repeat(2, 1fr) !important;
+	}
+	.homepage-hero-img {
+		top: 20%;
+	}
+}

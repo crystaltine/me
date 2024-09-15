@@ -1,0 +1,24 @@
+.experience-main-desc {
+	text-align: center;
+	width: min(900px, 80%);
+	color: rgba(var(--textColor), 0.6);
+	margin: 0;
+}
+@media screen and (max-width: 500px) {
+	.experience-main-desc {
+		width: 90%;
+	}
+}
+
+.experience-subtext {
+	font-style: italic;
+	text-align: center;
+	color: rgba(var(--textColor), 0.6);
+	margin: 0;
+}
+
+.experience-card-container {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}

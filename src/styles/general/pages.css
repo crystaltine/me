@@ -1,0 +1,58 @@
+/* Generic page components */
+.generic-page-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: var(--menubarHeight);
+    min-height: calc(100vh - var(--menubarHeight));
+    box-sizing: border-box;
+    position: relative;
+    /* background-color: rgb(var(--backgroundColor0)); */
+    background-color: transparent;
+}
+.generic-page-body-expandable {
+    margin: 0 auto;
+    margin-top: var(--menubarHeight);
+    min-height: calc(100% - var(--menubarHeight));
+    width: var(--genericElementWidth);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(var(--backgroundColor0));
+}
+
+@keyframes everything-entry {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+.generic-page-fadein {
+    animation: everything-entry 0.5s ease;
+}
+
+.genpage-container {
+    padding: var(--pagePaddingY) 0;
+    width: var(--genericElementWidth);
+    margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+    .genpage-main {
+        flex-wrap: wrap;
+    }
+}
+.genpage-header {
+    margin: 0;
+    font-size: 40px;
+    font-family: var(--displayFont);
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.genpage-subheader {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--displayFont);
+    margin: -20px 0 30px 0;
+}
