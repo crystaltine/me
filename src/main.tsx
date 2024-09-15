@@ -14,9 +14,9 @@ const Main = () => {
     <ThemeProvider>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/art" element={<ArtPage />} />
-        <Route path="/resume" element={<ResumePage />} />
+        <Route path="/me/#/projects" element={<ProjectsPage />} />
+        <Route path="/me/#/art" element={<ArtPage />} />
+        <Route path="/me/#/resume" element={<ResumePage />} />
       </Routes>
     </ThemeProvider>
   )
