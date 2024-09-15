@@ -21,6 +21,10 @@ const ResumePage = () => {
 	const [showCheckIconForCopy, setShowCheckIconForCopy] = React.useState(false);
 	const { theme } = useTheme();
 
+	React.useEffect(() => {
+		document.title = 'Resume | Michael Sheng';
+	})
+
   return (
     <GenericPage selected='Resume'>
 			<div className='page-hero'>

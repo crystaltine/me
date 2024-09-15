@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import '../styles/home/homepage.css';
 import '../styles/home/experience.css';
 import '../styles/home/homepage_compact.css';
@@ -21,6 +23,10 @@ import ExperienceCard, { ExperienceCardProps } from '../components/experienceCar
 const Homepage = () => {
 
 	const { theme } = useTheme();
+
+	useEffect(() => {
+		document.title = 'Home | Michael Sheng';
+	})
 
   return (
     <GenericPage selected='Experience'>

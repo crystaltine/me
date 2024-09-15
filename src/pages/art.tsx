@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import '../styles/art/artPage.css';
 import { GenericPage } from '../components/generics';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
@@ -11,9 +12,14 @@ import graphic3Light from '../assets/graphic3-light.png';
 import graphic3Dark from '../assets/graphic3-dark.png';
 import ArtDisplayCard from '../components/artDisplayCard';
 
+
 const ArtPage = () => {
 	
 	const { theme } = useTheme();
+
+	useEffect(() => {
+		document.title = 'Art | Michael Sheng';
+	})
 
   return (
     <GenericPage selected='Art'>

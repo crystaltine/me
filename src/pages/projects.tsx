@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import '../styles/projects/projectsPage.css';
 import '../styles/art/artPage.css';
 import { GenericPage } from '../components/generics';
@@ -19,6 +20,10 @@ const projectTags = _projectTags as { [key: string] : {name: string, color: stri
 const ProjectsPage = () => {
 	
 	const { theme } = useTheme();
+
+	useEffect(() => {
+		document.title = 'Projects | Michael Sheng';
+	})
 
   return (
     <GenericPage selected='Projects'>
