@@ -1,0 +1,62 @@
+<h3>Overview</h3>
+<p>
+	Floracosm is an exploratory crowdfunding website I made as a personal project, developed between August 2023 to November 2023. The theoretical premise of the website is to provide a minor incentive to donating to charity by allowing users to contribute images to an annual global mural. 
+	<br /><br />
+	This was my first large-scale web application that included client, server, and database logic.
+	I learned so much about the process of full-stack web development and system design - from responsive design to REST APIs to cloud deployment.
+</p>
+
+<h3>Tech Stack</h3>
+<p>
+	Working on this project reinforced my proficiency in the following web development skills/technologies:
+</p>
+
+<h4>Frontend</h4>
+<p>
+	- React
+	<br />- Javascript
+	<br />- Data validation
+	<br />- Responsive Design
+	<br />- User experience
+	<br />- Socket.io
+</p>
+
+<h4>Backend</h4>
+<p>
+	- Express
+	<br />- REST API
+	<br />- JWT & Authentication
+	<br />- SQL Server Databases
+	<br />- Stripe payments
+	<br />- Microsoft Azure (deployment)
+	<br />- Azure Blob Storage Accounts
+	<br />- Socket.io
+	<br />- Submission caching 
+	<br />- Efficient data structures
+	<br />- Robust error handling
+	<br />- Automated emails/MFA (Nodemailer)
+</p>
+
+<h3>Highlights</h3>
+<p>
+	-<b>Express, REST API</b>: I developed a server which exposes a REST API to handle various events throughout the web app, such as requesting statistics, submitting images, updating account info, and authentication. The framework used for this was Express, with additional functionality provided by other libraries like multer and cron.
+	<br />-<b>Data structures and optimization</b>: Floracosm's backend server is optimized for efficiency using various data structures and algorithms to ensure low latency and cost-effective computations. For example, I built a live leaderboard using a dual map-array system that provides cheap creation (upon server restart), update, and get operations. 
+	<br />-<b>Custom JWT Authentication</b>: Floracosm uses a custom, fully functional authentication system backed by JWT tokens and HTTPonly cookies, safe practices such as password salting and hashing, and email verification using nodemailer and Gmail SMTP. 
+	<br />-<b>Data validation</b>: All client side requests are thoroughly checked for authorization and validated to ensure no malicious attacks or logic failures occur. This includes user-submitted file mimetype checking, database sanitation, submission data inconsistency detection, and validating payment integrity.
+	<br />-<b>Microsoft Azure Databases, Storage, and Deployment</b>: Both the backend and frontend are hosted as Azure Web Apps. Floracosm's database is also hosted using SQL Server in Azure, and is accessed using the mssql package for Node. User-submitted files are managed by an Azure blob storage account which can also be accessed server-side using IAM.
+	<br />-<b>Responsive Design</b>: I put a lot of effort into ensuring the site was fully accessible and consistent on any screen size. Page layouts change depending on the size of the viewport (e.g. collapsing the menu bar, automatically resizing pannable components, rearranging forms). 
+	<br />-<b>Stripe payments</b>: I also learned to integrate Stripe into webapps for payment processing in this project, implementing API webhooks, error boundaries, interface customization, and secure payment validation for user actions.
+</p>
+
+<h3>Takeaways</h3>
+<p>
+	As an introductory project to full-stack web development, I believe Floracosm was very beneficial;
+	I gained experience using cloud services, integrating payments, and creating an authentication system, among so many other things.
+	Of course, being both a new and solo developer, a significant portion of the time I dedicated to this project
+	was spent learning system design strategies and the various tools I needed to build them.
+	While I never advertised the project or spread any awareness about it, building Floracosm laid a foundation for me in web development and showed me that I really enjoy it! I'm glad I was able to create a presentable modern website, and reflect positively on my experience.
+	<br /><br />
+	I particularly enjoyed building the frontend components (like the pannable canvas and responsive forms), designing the art and style for the website, and optimizing server-side data structures to handle arbitrary volumes of traffic.
+	<br /><br />
+	Building Floracosm equipped me with a foundation in the skills necessary to be successful in web or full-stack environments. I still love building websites, and I can't wait to pursue even bigger projects in the future!
+</p>
