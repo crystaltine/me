@@ -10,7 +10,7 @@ body {
   --w90ElementWidth: min(90%, 1300px); /* used when screen width is very narrow */
   --pagePaddingY: min(100px, 10%);
 
-  --displayFont: "Figtree", "Wix Madefor Display", "Satoshi", "Red Hat Display", Roboto, system-ui, sans-serif;
+  --displayFont: "Figtree", "Satoshi", system-ui, sans-serif;
   --paragraphFont: "Figtree", "Inter", "Work Sans", "Open Sans", system-ui, sans-serif;
   --codeFont: "Roboto Mono", Consolas, monospace;
 
