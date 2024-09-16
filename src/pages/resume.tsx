@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState, useEffect, useCallback } from 'react';
+
 import '../styles/resume/resumePage.css';
 import { GenericPage } from '../components/generics';
 import { useTheme } from '../themeHook';
@@ -18,13 +19,27 @@ const resumeTimestamp = "9 September 2024";
 
 const ResumePage = () => {
 	
-	const [showCheckIconForCopy, setShowCheckIconForCopy] = React.useState(false);
+	const [showCheckIconForCopy, setShowCheckIconForCopy] = useState(false);
 	const { theme } = useTheme();
 
-	React.useEffect(() => {
+	useEffect(() => {
 		window.scrollTo(0, 0);
 		document.title = 'Resume | Michael Sheng';
 	}, [])
+
+	const copyResumeImgToClipboard = useCallback(async () => {
+		try {
+			const res = await fetch(resumePreview);
+			const blob = await res.blob();
+			await navigator.clipboard.write([
+				new ClipboardItem({
+					[blob.type]: blob,
+				}),
+			]);
+		} catch (err) {
+			console.error('Failed to copy image! ', err);
+		}
+	}, []);
 
   return (
     <GenericPage selected='Resume'>
@@ -63,11 +78,7 @@ const ResumePage = () => {
 
 						<button 
 						className='button-secondary button-medium'
-						onClick={() => {
-							navigator.clipboard.write([new ClipboardItem({ "image/png": resumePreview })]).then(() => {
-								setShowCheckIconForCopy(true);
-							});
-						}}
+						onClick={copyResumeImgToClipboard}
 						onMouseEnter={() => setShowCheckIconForCopy(false)}>
 							{showCheckIconForCopy?
 								<img className="check-icon invert-on-dark-theme" src={checkIcon} alt="success" /> :

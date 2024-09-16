@@ -46,7 +46,7 @@ const Menubar = (props: MenubarProps) => {
     <div className='menubar-main'>
 
       <div className='menubar-title-container'>
-        <a className='link-invis menubar-id' href="/">
+        <a className='link-invis menubar-id' href="/me/#/">
           <img className='menubar-logo-img' src={logoImg} alt="logo" />
           <div className='menubar-title-text'>
             <span className='menubar-title-firstname'>m</span>

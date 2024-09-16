@@ -29,10 +29,11 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 	}, [props.image]);
 
 	React.useEffect(() => {
-		fetch(`/me/src/content/experience/${props.descFile}.txt`)
-		.then(res => res.text())
-		.then(data => {
-			setDesc(data);
+		import(`../content/experience/${props.descFile}.txt`)
+		.then((desc) => {
+			fetch(desc.default)
+			.then((response) => response.text())
+			.then((text) => setDesc(text));
 		});
 	}, [props.descFile]);
 

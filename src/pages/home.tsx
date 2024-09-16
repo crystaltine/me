@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
 import '../styles/home/homepage.css';
 import '../styles/home/experience.css';
@@ -30,6 +30,13 @@ const Homepage = () => {
 		document.title = 'Home | Michael Sheng';
 	}, [])
 
+	const smoothScrollToExperience = useCallback(() => {
+		const experienceElement = document.getElementById('experience-scrollto');
+		if (experienceElement) {
+			experienceElement.scrollIntoView({ behavior: 'smooth' });
+		}
+	}, []);
+
   return (
     <GenericPage selected='Experience'>
 			<div className='homepage-hero-backdrop'>
@@ -50,12 +57,12 @@ const Homepage = () => {
 							<div className='homepage-hero-2'>
 								<h6 className='homepage-hero-2-text'>Thanks for stopping by! Check out my...</h6>
 								<div className='homepage-lg-icons-container'>
-									<a className='link-invis icon-wrapper-link' href='/me/#/experience'>
+									<div className='link-invis icon-wrapper-link' onClick={smoothScrollToExperience}>
 										<div className='homepage-lg-icon-wrapper lgi-0'>
 											<img src={experienceIcon} alt='Experience' className='homepage-lg-icon' />
 											<h6 className='homepage-lg-icon-text'>Experience</h6>
 										</div>
-									</a>
+									</div>
 									<a className='link-invis icon-wrapper-link' href='/me/#/projects'>
 										<div className='homepage-lg-icon-wrapper lgi-1'>
 											<img src={projectsIcon} alt='Projects' className='homepage-lg-icon' />
@@ -85,7 +92,7 @@ const Homepage = () => {
 				</div>
 			</div>
 
-			<hr className='homepage-separator' />
+			<hr id="experience-scrollto" className='homepage-separator' />
 
 			<div className='page-hero'>
 				<img src={experienceIcon} alt='Experience' className='page-hero-icon' />
