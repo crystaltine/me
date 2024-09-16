@@ -4,8 +4,7 @@
 	}
 	.experience-card-image {
 		width: 100% !important;
-		height: fit-content;
-		object-fit: cover;
+		object-fit: contain;
 	}
 	.experience-card-text {
 		width: 100% !important;
@@ -52,9 +51,8 @@
 .experience-card-image {
 	width: 100%;
 	border-radius: var(--roundedLarge);
-	height: fit-content;
 	margin-top: 1em;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .experience-card-tags-container {

@@ -63,14 +63,14 @@ const ResumePage = () => {
 					<p className='resume-timestamp'>Last updated {resumeTimestamp}</p>
 
 					<div className='resume-actions-container'>
-						<a className='link-invis' download href="src/content/resume/MS_Resume_PDF_I.pdf" target="_blank" rel="noopener noreferrer">
+						<a className='link-invis' download href="/assets/MS_Resume_PDF_I.pdf" target="_blank" rel="noopener noreferrer">
 							<button className='button-primary button-medium'>
 								<img className="muted-icon invert" src={downloadIcon} alt="download" />
 								&nbsp;Download PDF
 							</button>
 						</a>
 
-						<a className='link-invis' href="src/content/resume/MS_Resume_PDF_I.pdf" target="_blank" rel="noopener noreferrer">
+						<a className='link-invis' href="/assets/MS_Resume_PDF_I.pdf" target="_blank" rel="noopener noreferrer">
 							<button className='button-primary button-medium'>
 								<img className="muted-icon invert" src={linkIcon} alt="view" />
 								&nbsp;View File
