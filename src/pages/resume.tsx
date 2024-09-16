@@ -36,6 +36,7 @@ const ResumePage = () => {
 					[blob.type]: blob,
 				}),
 			]);
+			setShowCheckIconForCopy(true);
 		} catch (err) {
 			console.error('Failed to copy image! ', err);
 		}
