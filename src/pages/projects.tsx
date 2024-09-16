@@ -6,9 +6,9 @@ import { useTheme } from '../themeHook';
 import ProjectCard, { ProjectCardProps } from '../components/projectCard';
 import SkillTag from '../components/skillTag';
 
-import icon from '../assets/projects-icon-square.png';
-import graphic4Light from '../assets/graphic4-light.png';
-import graphic4Dark from '../assets/graphic4-dark.png';
+import icon from '../assets/page_icons/projects-icon.png';
+import graphic4Light from '../assets/graphics/graphic4-light.png';
+import graphic4Dark from '../assets/graphics/graphic4-dark.png';
 
 import _projectsData from '../content/projects/projects.json';
 const projectsData = _projectsData as ProjectCardProps[]; // so ts doesnt complain

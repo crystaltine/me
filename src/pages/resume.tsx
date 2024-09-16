@@ -2,15 +2,15 @@ import React from 'react';
 import '../styles/resume/resumePage.css';
 import { GenericPage } from '../components/generics';
 import { useTheme } from '../themeHook';
-import icon from '../assets/resume-icon.png';
+import icon from '../assets/page_icons/resume-icon.png';
 
-import graphic2Light from '../assets/graphic2-light.png';
-import graphic2Dark from '../assets/graphic2-dark.png';
+import graphic2Light from '../assets/graphics/graphic2-light.png';
+import graphic2Dark from '../assets/graphics/graphic2-dark.png';
 
-import downloadIcon from '../assets/download.svg';
-import linkIcon from '../assets/external-link.svg';
-import copyIcon from '../assets/copy.svg';
-import checkIcon from '../assets/check.svg';
+import downloadIcon from '../assets/svgs/download.svg';
+import linkIcon from '../assets/svgs/external-link.svg';
+import copyIcon from '../assets/svgs/copy.svg';
+import checkIcon from '../assets/svgs/check.svg';
 
 import resumePreview from '../content/resume/resume_preview.jpg';
 

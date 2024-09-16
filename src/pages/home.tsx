@@ -8,15 +8,16 @@ import { GenericPage } from '../components/generics';
 import _experienceData from '../content/experience/experiences.json';
 const experienceData = _experienceData as ExperienceCardProps[];
 
-import heroImgRightDark from '../assets/graphic6-dark.png';
+import homepageHeroLight from '../assets/graphics/homepage-hero-light.png';
+import homepageHeroDark from '../assets/graphics/homepage-hero-dark.png';
 
-import graphic5Light from '../assets/graphic5-light.png';
-import graphic5Dark from '../assets/graphic5-dark.png';
+import graphic5Light from '../assets/graphics/graphic5-light.png';
+import graphic5Dark from '../assets/graphics/graphic5-dark.png';
 
-import experienceIcon from '../assets/experience-icon.png';
-import projectsIcon from '../assets/projects-icon-square.png';
-import artIcon from '../assets/art-icon-inline.png';
-import resumeIcon from '../assets/resume-icon.png';
+import experienceIcon from '../assets/page_icons/experience-icon.png';
+import projectsIcon from '../assets/page_icons/projects-icon.png';
+import artIcon from '../assets/page_icons/art-icon.png';
+import resumeIcon from '../assets/page_icons/resume-icon.png';
 import { useTheme } from '../themeHook';
 import ExperienceCard, { ExperienceCardProps } from '../components/experienceCard';
 
@@ -79,7 +80,7 @@ const Homepage = () => {
 
 					</div>
 
-					<img src={theme === "dark"? heroImgRightDark : heroImgRightDark} alt='Hero' className='homepage-hero-img' />
+					<img src={theme === "dark"? homepageHeroDark : homepageHeroLight} alt='Hero' className='homepage-hero-img' />
 
 				</div>
 			</div>

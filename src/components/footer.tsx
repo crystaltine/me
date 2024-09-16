@@ -3,15 +3,15 @@ import "../styles/footer/footer.css";
 import "../styles/footer/footer_compact.css";
 
 // icon imports
-import emailIcon from '../assets/email-icon.svg';
-import githubIcon from '../assets/github-icon.svg';
-import linkedinIcon from '../assets/linkedin-icon.svg';
-import discordIcon from '../assets/discord-icon.svg';
-import deviantartIcon from '../assets/deviantart-icon.svg';
-import instagramIcon from '../assets/instagram-icon.svg';
+import emailIcon from '../assets/svgs/email-icon.svg';
+import githubIcon from '../assets/svgs/github-icon.svg';
+import linkedinIcon from '../assets/svgs/linkedin-icon.svg';
+import discordIcon from '../assets/svgs/discord-icon.svg';
+import deviantartIcon from '../assets/svgs/deviantart-icon.svg';
+import instagramIcon from '../assets/svgs/instagram-icon.svg';
 
-import copyIcon from '../assets/copy.svg';
-import checkIcon from '../assets/check.svg';
+import copyIcon from '../assets/svgs/copy.svg';
+import checkIcon from '../assets/svgs/check.svg';
 
 const Footer = () => {
 	

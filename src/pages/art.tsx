@@ -3,13 +3,13 @@ import '../styles/art/artPage.css';
 import { GenericPage } from '../components/generics';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { useTheme } from '../themeHook';
-import icon from '../assets/art-icon-inline.png';
+import icon from '../assets/page_icons/art-icon.png';
 
 import _artData from '../content/art/art.json';
 const artData = _artData as {title: string, desc: string, timestamp: string, image: string }[];
 
-import graphic3Light from '../assets/graphic3-light.png';
-import graphic3Dark from '../assets/graphic3-dark.png';
+import graphic3Light from '../assets/graphics/graphic3-light.png';
+import graphic3Dark from '../assets/graphics/graphic3-dark.png';
 import ArtDisplayCard from '../components/artDisplayCard';
 
 

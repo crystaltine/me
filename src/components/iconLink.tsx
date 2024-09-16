@@ -17,7 +17,7 @@ const IconLink = (props: IconLinkProps) => {
 
 	const [image, setImage] = React.useState<string>('');
 	React.useEffect(() => {
-		import(`../assets/${LINK_ICONS[props.icon]}.svg`).then((image) => {
+		import(`../assets/svgs/${LINK_ICONS[props.icon]}.svg`).then((image) => {
 			setImage(image.default);
 		});
 	}, [props.icon]);
