@@ -235,6 +235,10 @@
 		rgba(var(--primaryColor0), 0.3) 30%,
 		rgba(var(--primaryColor4), 0.01) 100%
 	);
+	transition: background 0.3s ease, box-shadow 0.2s ease;
+}
+.theme-dark .icon-wrapper-link:hover .homepage-lg-icon {
+	box-shadow: 0 20px 50px -30px rgba(var(--primaryColor0), 0.5) inset;
 }
 
 .homepage-separator {

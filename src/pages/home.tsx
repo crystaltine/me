@@ -49,22 +49,30 @@ const Homepage = () => {
 							<div className='homepage-hero-2'>
 								<h6 className='homepage-hero-2-text'>Thanks for stopping by! Check out my...</h6>
 								<div className='homepage-lg-icons-container'>
-									<div className='homepage-lg-icon-wrapper lgi-0'>
-										<img src={experienceIcon} alt='Experience' className='homepage-lg-icon' />
-										<h6 className='homepage-lg-icon-text'>Experience</h6>
-									</div>
-									<div className='homepage-lg-icon-wrapper lgi-1'>
-										<img src={projectsIcon} alt='Projects' className='homepage-lg-icon' />
-										<h6 className='homepage-lg-icon-text'>Projects</h6>
-									</div>
-									<div className='homepage-lg-icon-wrapper lgi-2'>
-										<img src={artIcon} alt='Art' className='homepage-lg-icon' />
-										<h6 className='homepage-lg-icon-text'>Art</h6>
-									</div>
-									<div className='homepage-lg-icon-wrapper lgi-3'>
-										<img src={resumeIcon} alt='Resume' className='homepage-lg-icon' />
-										<h6 className='homepage-lg-icon-text'>Resume</h6>
-									</div>
+									<a className='link-invis icon-wrapper-link' href='/me/#/experience'>
+										<div className='homepage-lg-icon-wrapper lgi-0'>
+											<img src={experienceIcon} alt='Experience' className='homepage-lg-icon' />
+											<h6 className='homepage-lg-icon-text'>Experience</h6>
+										</div>
+									</a>
+									<a className='link-invis icon-wrapper-link' href='/me/#/projects'>
+										<div className='homepage-lg-icon-wrapper lgi-1'>
+											<img src={projectsIcon} alt='Projects' className='homepage-lg-icon' />
+											<h6 className='homepage-lg-icon-text'>Projects</h6>
+										</div>
+									</a>
+									<a className='link-invis icon-wrapper-link' href='/me/#/art'>
+										<div className='homepage-lg-icon-wrapper lgi-2'>
+											<img src={artIcon} alt='Art' className='homepage-lg-icon' />
+											<h6 className='homepage-lg-icon-text'>Art</h6>
+										</div>
+									</a>
+									<a className='link-invis icon-wrapper-link' href='/me/#/resume'>
+										<div className='homepage-lg-icon-wrapper lgi-3'>
+											<img src={resumeIcon} alt='Resume' className='homepage-lg-icon' />
+											<h6 className='homepage-lg-icon-text'>Resume</h6>
+										</div>
+									</a>
 								</div>
 							</div>
 						</div>
