@@ -13,7 +13,7 @@ import linkIcon from '../assets/svgs/external-link.svg';
 import copyIcon from '../assets/svgs/copy.svg';
 import checkIcon from '../assets/svgs/check.svg';
 
-import resumePreview from '../content/resume/resume_preview.jpg';
+import resumePreview from '../content/resume/resume_preview.png';
 
 const resumeTimestamp = "9 September 2024";
 

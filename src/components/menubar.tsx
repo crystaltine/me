@@ -19,10 +19,10 @@ interface MenubarProps {
  * { link name : [href, icon filename] }
  */
 const MENUBAR_LINKS = {
-  "Experience": ["/me/#/", experienceIcon],
-  "Projects": ["/me/#/projects", projectsIcon],
-  "Art": ["/me/#/art", artIcon],
-  "Resume": ["/me/#/resume", resumeIcon],
+  "Experience": ["/#/", experienceIcon],
+  "Projects": ["/#/projects", projectsIcon],
+  "Art": ["/#/art", artIcon],
+  "Resume": ["/#/resume", resumeIcon],
 }
 
 function MenubarLink(props: {text: string, icon: string, href: string, curr?: boolean}) {
@@ -46,7 +46,7 @@ const Menubar = (props: MenubarProps) => {
     <div className='menubar-main'>
 
       <div className='menubar-title-container'>
-        <a className='link-invis menubar-id' href="/me/#/">
+        <a className='link-invis menubar-id' href="/#/">
           <img className='menubar-logo-img' src={logoImg} alt="logo" />
           <div className='menubar-title-text'>
             <span className='menubar-title-firstname'>m</span>

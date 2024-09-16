@@ -63,19 +63,19 @@ const Homepage = () => {
 											<h6 className='homepage-lg-icon-text'>Experience</h6>
 										</div>
 									</div>
-									<a className='link-invis icon-wrapper-link' href='/me/#/projects'>
+									<a className='link-invis icon-wrapper-link' href='/#/projects'>
 										<div className='homepage-lg-icon-wrapper lgi-1'>
 											<img src={projectsIcon} alt='Projects' className='homepage-lg-icon' />
 											<h6 className='homepage-lg-icon-text'>Projects</h6>
 										</div>
 									</a>
-									<a className='link-invis icon-wrapper-link' href='/me/#/art'>
+									<a className='link-invis icon-wrapper-link' href='/#/art'>
 										<div className='homepage-lg-icon-wrapper lgi-2'>
 											<img src={artIcon} alt='Art' className='homepage-lg-icon' />
 											<h6 className='homepage-lg-icon-text'>Art</h6>
 										</div>
 									</a>
-									<a className='link-invis icon-wrapper-link' href='/me/#/resume'>
+									<a className='link-invis icon-wrapper-link' href='/#/resume'>
 										<div className='homepage-lg-icon-wrapper lgi-3'>
 											<img src={resumeIcon} alt='Resume' className='homepage-lg-icon' />
 											<h6 className='homepage-lg-icon-text'>Resume</h6>
