@@ -18,8 +18,9 @@ const ArtPage = () => {
 	const { theme } = useTheme();
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		document.title = 'Art | Michael Sheng';
-	})
+	}, [])
 
   return (
     <GenericPage selected='Art'>
@@ -33,7 +34,7 @@ const ArtPage = () => {
 				</h1>
 			</div>
 
-			<p className='art-main-desc'>
+			<div className='art-main-desc'>
 				I make digital art and animations as a side hobby! This gallery
 				contains things I've made that I feel like sharing. I'm still very new to art
 				in general, so proceed at your eyes' risk.
@@ -41,15 +42,15 @@ const ArtPage = () => {
 				<div className='mt-6 boxedtext-primary'>
 					Also check out <a href='https://www.deviantart.com/crystaltine' target='_blank' rel='noreferrer'>my DeviantArt</a>!
 				</div>
-			</p>
+			</div>
 
 			<hr className='page-separator fadein_0_6' />
 
 			<div className='art-page-cards-container section-medium section-bottom'>
 				<ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2}}>
 					<Masonry gutter='2rem'>
-						{artData.map((item) => (
-							<ArtDisplayCard {...item} />
+						{artData.map((item, idx) => (
+							<ArtDisplayCard key={idx} {...item} />
 						))}
 					</Masonry>
 				</ResponsiveMasonry>

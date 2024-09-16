@@ -22,8 +22,9 @@ const ResumePage = () => {
 	const { theme } = useTheme();
 
 	React.useEffect(() => {
+		window.scrollTo(0, 0);
 		document.title = 'Resume | Michael Sheng';
-	})
+	}, [])
 
   return (
     <GenericPage selected='Resume'>

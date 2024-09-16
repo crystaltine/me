@@ -1,32 +1,12 @@
 /* for larger screens, when homepage hero is left aligned */
 @keyframes homepage-left-flyin {
 	0% {
-		opacity: 0.5;
 		transform: translateX(-10%);
 	}
 	100% {
-		opacity: 1;
 		transform: translateX(0);
 	}
 }
-
-/* only for larger screens, when hero img is right aligned */
-@keyframes hero-img-right-flyin {
-	0% {
-		opacity: 0;
-		transform: translateX(10%);
-		filter: brightness(0.2);
-	}
-	80% {
-		filter: brightness(1.4);
-	}
-	100% {
-		opacity: 1;
-		filter: brightness(1);
-		transform: translateX(0);
-	}
-}
-
 /* for small screens, when homepage hero is centered */
 @keyframes homepage-bottom-flyin {
 	0% {
@@ -39,9 +19,27 @@
 	}
 }
 
-body {
-	--iconPadding: min(1.5rem, 8vw);
-	--iconSize: min(6rem, 30vw);
+/* only for larger screens, when hero img is right aligned */
+@keyframes hero-img-right-flyin {
+	0% {
+		opacity: 0;
+		filter:hue-rotate(-50deg);
+		transform: translateX(10%) scale(1.05);
+	}
+	100% {
+		opacity: 1;
+		filter:hue-rotate(0deg);
+		transform: translateX(0) scale(1);
+	}
+}
+/* for small screens, need opacity fadein cuz backdrop-filter is slow */
+@keyframes hero-img-appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 :root {
@@ -66,8 +64,9 @@ body {
 .homepage-hero-img {
 	position: absolute;
 	right: 0;
-	width: min(100%, 600px);
-	animation: hero-img-right-flyin 1s ease;
+	max-height: 100%;
+	animation: hero-img-right-flyin 0.9s ease;
+	animation-fill-mode: both;
 }
 
 .homepage-hero-left {
@@ -78,22 +77,32 @@ body {
 }
 
 
-.homepage-hero-text {
+/* "glass frame" around .homepage-hero-1 */
+.homepage-hero-1-blur {
+	padding: 8px;
+	border-radius: calc(var(--roundedXL) + 8px);
+	border: 1px solid rgba(var(--secondaryColor0), 0.3);
+	backdrop-filter: blur(20px);
+	transition: box-shadow 0.3s;
+	animation: homepage-left-flyin 0.9s ease;
+	animation-fill-mode: both;
+	box-shadow: 
+	0 -30px 10px -30px rgba(202, 195, 255, 0.9) inset, 
+	0 60px 20px -60px rgba(202, 195, 255, 0.9), 
+	0 -20px 50px -20px rgba(132, 0, 255, 0.9) inset,
+	0 40px 100px -40px rgba(132, 0, 255, 0.9);
+}
+.homepage-hero-1 {
 	position: relative;
 	border-radius: var(--roundedXL);
 	padding: 3rem 2rem;
-	backdrop-filter: blur(10px);
 	word-wrap: break-word;
-	animation: homepage-left-flyin 0.9s ease;
-	z-index: 60;
 }
-.theme-light .homepage-hero-text {
+.theme-light .homepage-hero-1 {
 	border: 1px solid rgba(var(--secondaryColor0), 0.4);
 }
-.theme-dark .homepage-hero-text {
-	box-shadow: 
-	0 60px 20px -60px rgba(202, 195, 255, 0.9), 
-	0 40px 100px -40px rgba(132, 0, 255, 0.9);
+.theme-dark .homepage-hero-1 {
+	
 	background-image: radial-gradient(
 		70% 100% at 60% -50%,
 		rgba(var(--primaryColor0), 0.1) 0%,
@@ -107,42 +116,22 @@ body {
 		transparent 90%,
 		rgba(var(--primaryColor0), 0.04) 100%
 	);
-	border: 1px solid rgba(var(--secondaryColor0), 0.25);
-}
-/* "glass frame" around .homepage-hero-text */
-.homepage-hero-text::before {
-	content: '';
-	position: absolute;
-	top: -8px;
-	left: -8px;
-	width: calc(100% + 2 * 8px);
-	height: calc(100% + 2 * 8px);
-	border-radius: calc(var(--roundedXL) + 8px);
-	border: 1px solid rgba(var(--secondaryColor0), 0.3);
-	backdrop-filter: blur(10px);
-	z-index: -1;
-	transition: box-shadow 0.3s;
-}
-.theme-dark .homepage-hero-text::before {
-	box-shadow: 0 40px 200px -40px rgba(119, 0, 255, 0.2);
+	
+	border-image: linear-gradient(90deg, transparent 10%, rgba(var(--secondaryColor0), 1), transparent 90%) 1;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .homepage-hero-2 {
 	position: relative;
 	border-radius: var(--roundedXL);
-	padding: 1.5rem 2rem;
+	padding: 1.5rem 0;
 	box-sizing: border-box;
-	backdrop-filter: blur(10px);
-	animation: homepage-left-flyin 0.9s ease;
-	animation-delay: 0.1s;
-	animation-fill-mode: backwards;
-	z-index: 65;
 }
 .theme-light .homepage-hero-2 {
 	border: 1px solid rgba(var(--secondaryColor0), 0.4);
 }
 .theme-dark .homepage-hero-2 {
-	border: 1px solid rgba(var(--secondaryColor0), 0.25);
 	box-shadow: 0 0 100px -40px rgba(132, 0, 255, 0.7);
 	background-image: radial-gradient(
 		70% 100% at 60% -50%,
@@ -157,21 +146,21 @@ body {
 		transparent 90%,
 		rgba(var(--primaryColor0), 0.04) 100%
 	);
+	border-image: linear-gradient(90deg, transparent 10%, rgba(var(--secondaryColor0), 1), transparent 90%) 1;
+  border-width: 1px;
+  border-style: solid;
 }
-.homepage-hero-2::before {
-	content: '';
-	position: absolute;
-	top: -8px;
-	left: -8px;
-	width: calc(100% + 2 * 8px);
-	height: calc(100% + 2 * 8px);
+.homepage-hero-2-blur {
+	padding: 8px;
 	border-radius: calc(var(--roundedXL) + 8px);
 	border: 1px solid rgba(var(--secondaryColor0), 0.3);
-	z-index: -1;
 	transition: box-shadow 0.3s;
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(20px);
+	animation: homepage-left-flyin 0.9s ease;
+	animation-delay: 0.1s;
+	animation-fill-mode: both;
 }
-.theme-dark .homepage-hero-2::before {
+.theme-dark .homepage-hero-2-blur {
 	box-shadow: 0 40px 200px -40px rgba(119, 0, 255, 0.2);
 }
 
@@ -199,10 +188,10 @@ body {
 	color: rgba(var(--textColor), 0.7);
 	margin: 0;
 }
-
 .homepage-hero-2-text {
 	color: rgba(var(--textColor), 0.6);
 	font-weight: 500;
+	margin: 0 min(2rem, 3vw);
 	margin-bottom: min(2rem, 3vh);
 	text-align: center;
 }
@@ -213,6 +202,8 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 2rem;
+	padding: 0 2rem;
+	box-sizing: border-box;
 }
 .homepage-lg-icon-wrapper {
 	display: flex;
@@ -227,18 +218,23 @@ body {
 	font-size: min(1rem, 5vw);
 }
 .homepage-lg-icon {
-	padding: var(--iconPadding);
-	width: var(--iconSize);
+	padding: min(1.5rem, 8vw);
+	width: min(6rem, 30vw);
 	border-radius: var(--roundedXL);
 	box-sizing: border-box;
-	background-color: rgb(var(--backgroundColor0));
 }
 .theme-light .homepage-lg-icon {
+	background-color: rgba(var(--backgroundColor0), 0.3);
 	border: 1px solid rgb(var(--secondaryColor0), 0.5);
 }
 .theme-dark .homepage-lg-icon {
+	background-color: rgba(var(--backgroundColor0), 0.8);
 	border: 1px solid rgb(var(--secondaryColor0), 0.25);
-	box-shadow: 0 20px 50px -30px rgba(var(--primaryColor4)), 0 50px 80px -70px rgba(var(--primaryColor0), 0.3) inset;
+	background-image: radial-gradient(
+		50% 150% at 50% -100%,
+		rgba(var(--primaryColor0), 0.3) 30%,
+		rgba(var(--primaryColor4), 0.01) 100%
+	);
 }
 
 .homepage-separator {

@@ -19,7 +19,7 @@ interface MenubarProps {
  * { link name : [href, icon filename] }
  */
 const MENUBAR_LINKS = {
-  "Experience": ["/", experienceIcon],
+  "Experience": ["/me/#/", experienceIcon],
   "Projects": ["/me/#/projects", projectsIcon],
   "Art": ["/me/#/art", artIcon],
   "Resume": ["/me/#/resume", resumeIcon],

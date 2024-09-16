@@ -44,10 +44,15 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #0004;
     overflow-y: auto;
     animation: fadeIn 0.2s ease;
     cursor: default;
+}
+.theme-light .popup-backdrop {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.theme-dark .popup-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .popup-container {
     display: flex;
@@ -75,7 +80,7 @@
 }
 .theme-light .popup-body {
     background-color: rgb(var(--backgroundColor3));
-    box-shadow: -1px 2px 40px 0px #0002;
+    box-shadow: -1px 2px 20px 0px #0001;
 }
 .theme-dark .popup-body {
     background-color: rgba(var(--backgroundColor0), 0.5);

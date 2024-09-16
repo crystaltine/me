@@ -40,8 +40,8 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 		<section className='experience-card' id={props.sectionId} onClick={() => setPopupOpen(true)}>
 
 			<div className='ec-left'>
-				<h1 className='mopo font-semibold text-3xl'>{props.title}</h1>
-				<h2 className='mopo font-medium text-lg'>{props.role}</h2>
+				<h1 className='mopo font-semibold text-4xl break-words'>{props.title}</h1>
+				<h2 className='mopo font-medium text-xl break-words'>{props.role}</h2>
 				<p className='mopo font-normal text-sm text-muted'>{props.dates}<span>&ensp;&#183;&ensp;</span>{props.location}</p>
 				<div className="experience-card-tags-container">{props.tags.map((tag, i) => <SkillTag key={i} tag={tag} />)}</div>
 				<img src={image} alt={props.title} className='experience-card-image' />

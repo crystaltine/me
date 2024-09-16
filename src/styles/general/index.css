@@ -5,7 +5,7 @@
 
 /* Document-wide theme-independent constant variables */
 body {
-  --genericElementWidth: min(80%, 1080px);
+  --genericElementWidth: min(85%, 1080px);
   --largerElementWidth: min(85%, 1300px);
   --w90ElementWidth: min(90%, 1300px); /* used when screen width is very narrow */
   --pagePaddingY: min(100px, 10%);
