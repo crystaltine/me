@@ -15,7 +15,7 @@ import checkIcon from '../assets/svgs/check.svg';
 
 import resumePreview from '../content/resume/resume_preview.png';
 
-const resumeTimestamp = "16th September 2024";
+const resumeTimestamp = "20th September 2024";
 
 const ResumePage = () => {
 	
