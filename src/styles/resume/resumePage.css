@@ -73,6 +73,7 @@ customizing each page individually if i ever want to */
 	width: 100%;
 	border: 1px solid rgb(var(--secondaryColor0), 0.5);
 	transition: box-shadow 0.3s ease; /* for theme changing */
+	border-radius: var(--roundedSmall);
 }
 .theme-dark .resume-preview-img {
 	box-shadow: 50px 30px 60px -30px rgba(var(--primaryColor2), 0.3);
