@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { ReactNode, useState, useEffect, useCallback, useRef } from 'react';
 
 import '../styles/home/homepage.css';
 import '../styles/home/experience.css';
@@ -21,14 +21,60 @@ import resumeIcon from '../assets/page_icons/resume-icon.png';
 import { useTheme } from '../themeHook';
 import ExperienceCard, { ExperienceCardProps } from '../components/experienceCard';
 
+type sizeSpecifier = { x: number, y: number };
+const ALTERNATE_TITLES: ((s: sizeSpecifier, r: React.RefObject<HTMLHeadingElement>) => ReactNode)[] = [
+	(s, r) => <h1 style={{width: s.x, height: s.y}} ref={r} className='hero-maintext'>Welcome!</h1>,
+	(s, r) => <h1 style={{width: s.x, height: s.y}} ref={r} className='hero-maintext'>Greetings!</h1>,
+	(s, r) => {
+		const hours = new Date().getHours();
+		const greeting = 
+			(hours >=2 && hours < 12)? 'Good morning!' : 
+			(hours >= 12 && hours < 18)? 'Good afternoon!' :
+			'Good evening!';
+		return <h1 ref={r} style={{width: s.x, height: s.y}} className='hero-maintext'>{greeting}</h1>
+	},
+];
+
 const Homepage = () => {
 
+	const maintext1Ref = useRef<HTMLHeadingElement>(null);
 	const { theme } = useTheme();
+
+	// the title that flashes in the hero section
+	// alternates with main title (basically flashes 1, 2, 1, 3, 1, 4, 1, 2, ...)
+	const [titleSwitchCounter, setTitleSwitchCounter] = useState(0);
+	const [cachedMaintextSize, setCachedMaintextSize] = useState({ x: 0, y: 0 });
+
+	/** snapshot size of maintext <h1>, then force that size
+	* since title changes (which might cause the div to resize)
+	* 
+	* Update on every window resize
+	*/
+	const snapshotMaintextSize = useCallback(() => {
+		const maintext1Ele = maintext1Ref.current;
+		const sizeX = maintext1Ele?.clientWidth;
+		const sizeY = maintext1Ele?.clientHeight;
+		console.log(`caching size, element: ${maintext1Ele}, x: ${sizeX}, y: ${sizeY}`);
+		setCachedMaintextSize({ x: sizeX || 0, y: sizeY || 0 });
+	}, []);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		document.title = 'Home | Michael Sheng';
-	}, [])
+
+		// window.addEventListener('resize', snapshotMaintextSize);
+		snapshotMaintextSize(); // initial call
+
+		const titleSwitchInterval = setInterval(() => {
+			snapshotMaintextSize();
+			setTitleSwitchCounter((prev) => (prev + 1));
+		}, 1500);
+
+		return () => {
+			clearInterval(titleSwitchInterval);
+			// window.removeEventListener('resize', snapshotMaintextSize);
+		}
+	}, [snapshotMaintextSize])
 
 	const smoothScrollToExperience = useCallback(() => {
 		const experienceElement = document.getElementById('experience-scrollto');
@@ -36,6 +82,10 @@ const Homepage = () => {
 			experienceElement.scrollIntoView({ behavior: 'smooth' });
 		}
 	}, []);
+
+	// on even counts, show normal, else switch between alternates
+	const titleIndexToShow = titleSwitchCounter % 2 === 1?
+		((Math.floor(titleSwitchCounter/2)) % ALTERNATE_TITLES.length) + 1 : 0;
 
   return (
     <GenericPage selected='Experience'>
@@ -47,9 +97,13 @@ const Homepage = () => {
 						
 						<div className='homepage-hero-1-blur'>
 							<div className='homepage-hero-1'>
-								<h1 className='hero-maintext'><span className='hero-accent-col'>Hey!</span> I'm Michael!</h1>
+								
+								{/* This allows for the animation to play, using titleIndexToShow === 0? doesnt work lol */}
+								{titleIndexToShow === 0 && <h1 ref={maintext1Ref} className='hero-maintext'><span className='hero-accent-col'>Hey!</span> I'm Michael!</h1>}
+								{titleIndexToShow !== 0 && ALTERNATE_TITLES[titleIndexToShow - 1](cachedMaintextSize, maintext1Ref)}
+
 								<p className='hero-faded-col'><span className='font-semibold'>B.S. Computer Science</span> @ Georgia Tech</p>
-								<p className='hero-faded-col'><span className="text-red-500">&#10084;</span> AI, Web Dev, Design, Art</p>
+								<p className='hero-faded-col'>Currently <span className="text-red-500">&#10084;</span> RL, Web dev, Design</p>
 							</div>
 						</div>
 

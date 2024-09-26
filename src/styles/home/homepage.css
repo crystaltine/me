@@ -166,9 +166,25 @@
 	box-shadow: 0 40px 200px -40px rgba(119, 0, 255, 0.2);
 }
 
+@keyframes maintext-appear {
+	0% {
+		opacity: 0;
+		transform: translateY(10%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 .hero-maintext {
 	font-size: 3.75rem;
 	line-height: 1.1;
+	animation: maintext-appear 0.15s ease;
+	animation-fill-mode: both;
+	overflow: visible;
+}
+.maintext-hidden {
+	visibility: hidden;
 }
 .hero-accent-col {
 	/* gradient text color */
