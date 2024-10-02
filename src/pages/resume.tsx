@@ -15,7 +15,7 @@ import checkIcon from '../assets/svgs/check.svg';
 
 import resumePreview from '../content/resume/resume_preview.png';
 
-const resumeTimestamp = "22th September 2024";
+const resumeTimestamp = "2nd October 2024";
 
 const ResumePage = () => {
 	
@@ -63,14 +63,14 @@ const ResumePage = () => {
 					<p className='resume-timestamp'>Last updated {resumeTimestamp}</p>
 
 					<div className='resume-actions-container'>
-						<a className='link-invis' download href="/assets/MS_Resume_PDF_I.pdf" target="_blank" rel="noopener noreferrer">
+						<a className='link-invis' download href="/assets/MS_Resume.pdf" target="_blank" rel="noopener noreferrer">
 							<button className='button-primary button-medium'>
 								<img className="muted-icon invert" src={downloadIcon} alt="download" />
 								&nbsp;Download PDF
 							</button>
 						</a>
 
-						<a className='link-invis' href="/assets/MS_Resume_PDF_I.pdf" target="_blank" rel="noopener noreferrer">
+						<a className='link-invis' href="/assets/MS_Resume.pdf" target="_blank" rel="noopener noreferrer">
 							<button className='button-primary button-medium'>
 								<img className="muted-icon invert" src={linkIcon} alt="view" />
 								&nbsp;View File

@@ -5,7 +5,7 @@
   "version": "1.1.0",
   "type": "module",
   "scripts": {
-    "predeploy": "vite build && copyfiles -f ./src/content/resume/MS_Resume_PDF_I.pdf ./dist/assets && echo Bundled Resume PDF!",
+    "predeploy": "vite build && copyfiles -f ./src/content/resume/MS_Resume.pdf ./dist/assets && echo Bundled Resume PDF!",
     "deploy": "gh-pages -d dist --cname msh379.me",
     "dev": "vite",
     "build": "tsc -b && vite build",
