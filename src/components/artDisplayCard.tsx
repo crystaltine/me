@@ -29,7 +29,7 @@ const ArtDisplayCard = (props: ArtDisplayCardProps) => {
 					}
 					<p className='adc-caption-timestamp'>{props.timestamp}</p>
 				</div>
-				{props.desc && <p className='adc-caption-desc'>{props.desc}</p>}
+				{props.desc && <p className='adc-caption-desc' dangerouslySetInnerHTML={{__html: props.desc}}></p>}
 			</div>
 		</div>
 	);

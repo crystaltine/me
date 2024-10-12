@@ -68,7 +68,7 @@ const Homepage = () => {
 		const titleSwitchInterval = setInterval(() => {
 			snapshotMaintextSize();
 			setTitleSwitchCounter((prev) => (prev + 1));
-		}, 1500);
+		}, 2000);
 
 		return () => {
 			clearInterval(titleSwitchInterval);

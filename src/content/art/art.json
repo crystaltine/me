@@ -1,5 +1,11 @@
 [
 	{
+		"title": "cutest little dummies!",
+		"desc": "piglins are so cute!!! (even though theyre stupid). does this qualify as #mcsrtober fanart? idk",
+		"timestamp": "11 Oct 2024",
+		"image": "poglins"
+	},
+	{
 		"title": "",
 		"desc": "bad attempt at being good at shading gone wrong (lighting is hard (backgrounds are hard (drawing is hard)))",
 		"timestamp": "9 Oct 2024",
@@ -31,7 +37,7 @@
 	},
 	{
 		"title": "C++ \"Fan\" Art",
-		"desc": "C++ when `int &(*(*&func)(int&, char*&))[][3](double*&, char* const&) = *new int[5];`",
+		"desc": "C++ when <code>int &(*(*&func)(int&, char*&))[][3](double*&, char* const&) = *new int[5];`</code> causes a segfault",
 		"timestamp": "20 July 2024",
 		"image": "31"
 	},
