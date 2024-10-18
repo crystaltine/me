@@ -21,7 +21,7 @@ import resumeIcon from '../assets/page_icons/resume-icon.png';
 import { useTheme } from '../themeHook';
 import ExperienceCard, { ExperienceCardProps } from '../components/experienceCard';
 
-const TITLE_BLINK_INTERVAL = 3; // seconds
+const TITLE_BLINK_INTERVAL = 5; // seconds
 
 type sizeSpecifier = { x: number, y: number };
 const ALTERNATE_TITLES: ((s: sizeSpecifier, r: React.RefObject<HTMLHeadingElement>) => ReactNode)[] = [
@@ -35,7 +35,6 @@ const ALTERNATE_TITLES: ((s: sizeSpecifier, r: React.RefObject<HTMLHeadingElemen
 			'Good evening!';
 		return <h1 ref={r} style={{width: s.x, height: s.y}} className='hero-maintext'>{greeting}</h1>
 	},
-	(s, r) => <h1 style={{width: s.x, height: s.y}} ref={r} className='hero-maintext'>Hello! :D</h1>,
 ];
 
 const Homepage = () => {

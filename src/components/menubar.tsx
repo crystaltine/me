@@ -8,7 +8,7 @@ import projectsIcon from '../assets/menubar_icons/projects.svg';
 import artIcon from '../assets/menubar_icons/art.svg';
 import resumeIcon from '../assets/menubar_icons/resume.svg';
 
-import logoImg from '../assets/logo7_128x_nobg.png';
+import logoImg from '../assets/logo8_128x_nobg.png';
 import { useTheme } from '../themeHook';
 
 interface MenubarProps {
