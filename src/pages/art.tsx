@@ -35,9 +35,9 @@ const ArtPage = () => {
 			</div>
 
 			<div className='art-main-desc'>
-				I make digital art and animations as a side hobby! This gallery
-				contains things I've made that I feel like sharing. I'm still very new to art
-				in general, so proceed at your eyes' risk.
+				I've been drawing as a side hobby! This gallery
+				contains things I've made that I feel like sharing. 
+				Note: I'm not very good. Proceed at your own risk.
 
 				<div className='mt-6 boxedtext-primary'>
 					Also check out <a href='https://www.deviantart.com/crystaltine' target='_blank' rel='noreferrer'>my DeviantArt</a>!
