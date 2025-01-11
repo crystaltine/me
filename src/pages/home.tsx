@@ -106,7 +106,7 @@ const Homepage = () => {
 								{titleIndexToShow !== 0 && ALTERNATE_TITLES[titleIndexToShow - 1](cachedMaintextSize, maintext1Ref)}
 
 								<p className='hero-faded-col'><span className='font-semibold'>B.S. Computer Science</span> @ Georgia Tech</p>
-								<p className='hero-faded-col'>Currently <span className="text-red-500">&#10084;</span> RL, Web dev, Design</p>
+								<p className='hero-faded-col'>(<span className="text-red-500">&#10084;</span>) Learning Rust, Webdev, Design</p>
 							</div>
 						</div>
 
