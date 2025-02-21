@@ -12,6 +12,7 @@ import instagramIcon from '../assets/svgs/instagram-icon.svg';
 
 import copyIcon from '../assets/svgs/copy.svg';
 import checkIcon from '../assets/svgs/check.svg';
+import { A } from "../a";
 
 const Footer = () => {
 	
@@ -37,6 +38,7 @@ const Footer = () => {
 					onClick={() => {
 						navigator.clipboard.writeText("msh379c@outlook.com");
 						setShowCheckIconForEmail(true);
+						A.a('J',{l:'email'})
 					}}
 					onMouseEnter={() => setShowCheckIconForEmail(false)}>
 						<img className="footer-link-icon invert-on-light-theme" src={emailIcon} alt="email" />
@@ -47,11 +49,11 @@ const Footer = () => {
 							<img className="copy-icon invert-on-dark-theme" src={copyIcon} alt="copy" />
 						}
 					</a>
-					<a className="footer-link" href="https://github.com/crystaltine" target="_blank" rel="noopener noreferrer">
+					<a onClick={()=>{A.a('J',{l:'github'})}} className="footer-link" href="https://github.com/crystaltine" target="_blank" rel="noopener noreferrer">
 						<img className="footer-link-icon" src={githubIcon} alt="github" />
 						<span>crystaltine &#8599;</span>
 					</a>
-					<a className="footer-link" href="https://www.linkedin.com/in/msh379/" target="_blank" rel="noopener noreferrer">
+					<a onClick={()=>{A.a('J',{l:'linkedin'})}} className="footer-link" href="https://www.linkedin.com/in/msh379/" target="_blank" rel="noopener noreferrer">
 						<img className="footer-link-icon" src={linkedinIcon} alt="linkedin" />
 						<span>msh379 &#8599;</span>
 					</a>
@@ -59,7 +61,7 @@ const Footer = () => {
 						<img className="footer-link-icon" src={deviantartIcon} alt="deviantart" />
 						<span>crystaltine &#8599;</span>
 					</a>*/}
-					<a className="footer-link" href="https://www.instagram.com/michaelsh379/" target="_blank" rel="noopener noreferrer">
+					<a onClick={()=>{A.a('J',{l:'instagram'})}} className="footer-link" href="https://www.instagram.com/michaelsh379/" target="_blank" rel="noopener noreferrer">
 						<img className="footer-link-icon" src={instagramIcon} alt="instagram" />
 						<span>michaelsh379 &#8599;</span>
 					</a>
