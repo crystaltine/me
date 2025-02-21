@@ -5,7 +5,7 @@ import lightThemeIcon from '../assets/menubar_icons/theme-light.svg';
 import darkThemeIcon from '../assets/menubar_icons/theme-dark.svg';
 import experienceIcon from '../assets/menubar_icons/experience.svg';
 import projectsIcon from '../assets/menubar_icons/projects.svg';
-import artIcon from '../assets/menubar_icons/art.svg';
+import aboutIcon from '../assets/menubar_icons/about.svg';
 import resumeIcon from '../assets/menubar_icons/resume.svg';
 
 import logoImg from '../assets/logo8_128x_nobg.png';
@@ -19,9 +19,9 @@ interface MenubarProps {
  * { link name : [href, icon filename] }
  */
 const MENUBAR_LINKS = {
-  "Experience": ["/#/", experienceIcon],
+  "Home": ["/#/", aboutIcon],
+  "Experience": ["/#/experience", experienceIcon],
   "Projects": ["/#/projects", projectsIcon],
-  "Art": ["/#/art", artIcon],
   "Resume": ["/#/resume", resumeIcon],
 }
 
@@ -38,7 +38,6 @@ function MenubarLink(props: {text: string, icon: string, href: string, curr?: bo
 }
 
 const Menubar = (props: MenubarProps) => {
-
   // allows theme toggle button to change icons
   const {theme, toggleTheme} = useTheme();
 

@@ -1,0 +1,19 @@
+.fact-card-scroller {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow-x: hidden;
+	padding: 1rem 0;
+	gap: 0.5rem;
+}
+.fact-card {
+	flex: 0 0 auto;
+	font-size: 1rem;
+	color: rgba(var(--textColor), 0.8);
+	scroll-snap-align: start;
+	padding: 0.5rem 1rem;
+	border-radius: var(--roundedMedium);
+	border: 1px solid rgba(var(--secondaryColor0), 0.2);
+	background-color: rgba(var(--backgroundColor0), 0.5);
+	transition: background 0.3s ease, box-shadow 0.2s ease;
+}

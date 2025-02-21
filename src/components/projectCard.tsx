@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/projects/card.css';
 import SkillTag from './skillTag';
 import IconLink from './iconLink';
+import { A } from '../a';
 
 export interface ProjectCardProps {
 	title: string;
@@ -18,11 +19,13 @@ const ProjectCard = (props: ProjectCardProps) => {
 		
 		import(`../content/projects/images/${props.image}.png`).then((image) => {
 			setImage(image.default);
-		}).catch(() => {
+		})
+		.catch(() => {
 			fetch("https://placehold.co/400x300").then((res) => {
 				setImage(res.url);
-			})});
-		}, [props.image]);
+			})
+		});
+	}, [props.image]);
 
 	return (
 		<div className='project-page-card'>
@@ -42,7 +45,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 					return (
 						<div key={idx} className='inline'>
 							{idx !== 0 && <span className='mx-2'>&#183;</span>}
-							<IconLink href={props.links[key]} icon={key} name={key} /> 
+							<IconLink href={props.links[key]} icon={key} name={key} a={()=>A.a('F',{l:props.title})} /> 
 						</div>
 					);
 				})}

@@ -1,7 +1,8 @@
 import React from 'react';
-import '../styles/home/experienceCard.css';
+import '../styles/experience/experienceCard.css';
 import { Popup } from './popup';
 import SkillTag from './skillTag';
+import { A } from '../a';
 
 export interface ExperienceCardProps {
 	sectionId: string;
@@ -37,8 +38,10 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 		});
 	}, [props.descFile]);
 
+	const a = React.useCallback(()=>A.a('F',{a:props.title}),[props.title]);
+
 	return (
-		<section className='experience-card' id={props.sectionId} onClick={() => setPopupOpen(true)}>
+		<section className='experience-card' id={props.sectionId} onClick={() => {a(); setPopupOpen(true)}}>
 
 			<div className='ec-left'>
 				<h1 className='mopo font-semibold text-4xl break-words'>{props.title}</h1>

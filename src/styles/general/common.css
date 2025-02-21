@@ -89,12 +89,12 @@
 }
 
 .page-separator {
-	margin: min(4rem, 6vh) auto;
+	margin: 4rem auto;
 	width: var(--largerElementWidth);
 }
 @media screen and (max-width: 500px) {
 	.page-separator {
-		margin: 4vh auto !important;
+		margin: 3rem auto !important;
 	}
 }
 
@@ -128,3 +128,16 @@
 .boxedtext-primary:hover {
   outline: 1px solid rgba(var(--secondaryColor1), 0.9);
 }
+
+.text-muted {
+	color: rgba(var(--textColor), 0.6);
+}	
+.text-muted-2 {
+	color: rgba(var(--textColor), 0.5);
+}	
+.text-muted-3 {
+	color: rgba(var(--textColor), 0.4);
+}	
+.text-muted-4 {
+	color: rgba(var(--textColor), 0.3);
+}	

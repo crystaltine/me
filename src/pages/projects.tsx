@@ -15,6 +15,7 @@ const projectsData = _projectsData as ProjectCardProps[]; // so ts doesnt compla
 
 import _projectTags from '../content/projects/projectTags.json';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import { A } from '../a';
 const projectTags = _projectTags as { [key: string] : {name: string, color: string, icon: string }};
 
 const ProjectsPage = () => {
@@ -24,6 +25,7 @@ const ProjectsPage = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		document.title = 'Projects | Michael Sheng';
+		A.c();
 	}, [])
 
   return (

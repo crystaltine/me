@@ -8,9 +8,10 @@ const LINK_ICONS: {[name: string] : string} = {
 }
 
 interface IconLinkProps {
-	"href": string;
-	"icon": string;
-	"name": string;
+	href: string;
+	icon: string;
+	name: string;
+	a:()=>void;
 }
 
 const IconLink = (props: IconLinkProps) => {
@@ -23,7 +24,7 @@ const IconLink = (props: IconLinkProps) => {
 	}, [props.icon]);
 
 	return (
-		<div className='inline'>
+		<div className='inline' onClick={props.a}>
 			<img className='icon-link-icon' src={image} alt={props.name} />
 			<a className='icon-link-a' href={props.href} target='_blank' rel='noreferrer'>
 				{props.name}

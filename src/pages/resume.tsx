@@ -14,8 +14,9 @@ import copyIcon from '../assets/svgs/copy.svg';
 import checkIcon from '../assets/svgs/check.svg';
 
 import resumePreview from '../content/resume/resume_preview.png';
+import { A } from '../a';
 
-const resumeTimestamp = "23rd November 2024";
+const resumeTimestamp = "21 February 2024";
 
 const ResumePage = () => {
 	
@@ -25,9 +26,11 @@ const ResumePage = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		document.title = 'Resume | Michael Sheng';
+		A.c();
 	}, [])
 
 	const copyResumeImgToClipboard = useCallback(async () => {
+		A.a('G',void 0);
 		try {
 			const res = await fetch(resumePreview);
 			const blob = await res.blob();
@@ -64,14 +67,14 @@ const ResumePage = () => {
 
 					<div className='resume-actions-container'>
 						<a className='link-invis' download href="/assets/MS_Resume.pdf" target="_blank" rel="noopener noreferrer">
-							<button className='button-primary button-medium'>
+							<button className='button-primary button-medium' onClick={()=>A.a('I',void 0)}>
 								<img className="muted-icon invert" src={downloadIcon} alt="download" />
 								&nbsp;Download PDF
 							</button>
 						</a>
 
 						<a className='link-invis' href="/assets/MS_Resume.pdf" target="_blank" rel="noopener noreferrer">
-							<button className='button-primary button-medium'>
+							<button className='button-primary button-medium' onClick={()=>A.a('H',void 0)}>
 								<img className="muted-icon invert" src={linkIcon} alt="view" />
 								&nbsp;View File
 							</button>

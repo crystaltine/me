@@ -7,7 +7,7 @@ import emailIcon from '../assets/svgs/email-icon.svg';
 import githubIcon from '../assets/svgs/github-icon.svg';
 import linkedinIcon from '../assets/svgs/linkedin-icon.svg';
 import discordIcon from '../assets/svgs/discord-icon.svg';
-import deviantartIcon from '../assets/svgs/deviantart-icon.svg';
+// import deviantartIcon from '../assets/svgs/deviantart-icon.svg';
 import instagramIcon from '../assets/svgs/instagram-icon.svg';
 
 import copyIcon from '../assets/svgs/copy.svg';
@@ -51,14 +51,14 @@ const Footer = () => {
 						<img className="footer-link-icon" src={githubIcon} alt="github" />
 						<span>crystaltine &#8599;</span>
 					</a>
-					<a className="footer-link" href="https://www.linkedin.com/in/michael-sheng-1aa558280/" target="_blank" rel="noopener noreferrer">
+					<a className="footer-link" href="https://www.linkedin.com/in/msh379/" target="_blank" rel="noopener noreferrer">
 						<img className="footer-link-icon" src={linkedinIcon} alt="linkedin" />
-						<span>michael-sheng-1aa558280 &#8599;</span>
+						<span>msh379 &#8599;</span>
 					</a>
-					<a className="footer-link" href="https://www.deviantart.com/crystaltine" target="_blank" rel="noopener noreferrer">
+					{/*<a className="footer-link" href="https://www.deviantart.com/crystaltine" target="_blank" rel="noopener noreferrer">
 						<img className="footer-link-icon" src={deviantartIcon} alt="deviantart" />
 						<span>crystaltine &#8599;</span>
-					</a>
+					</a>*/}
 					<a className="footer-link" href="https://www.instagram.com/michaelsh379/" target="_blank" rel="noopener noreferrer">
 						<img className="footer-link-icon" src={instagramIcon} alt="instagram" />
 						<span>michaelsh379 &#8599;</span>

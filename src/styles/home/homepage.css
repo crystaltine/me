@@ -214,6 +214,18 @@
 	text-align: center;
 }
 
+.aboutme-main-desc {
+	text-align: center;
+	width: min(900px, 80%);
+	color: rgba(var(--textColor), 0.6);
+	margin: 0;
+}
+@media screen and (max-width: 500px) {
+	.aboutme-main-desc {
+		width: 90%;
+	}
+}
+
 
 .homepage-lg-icons-container {
 	width: 100%;
@@ -262,4 +274,27 @@
 .homepage-separator {
 	margin: 0 auto;
 	width: var(--largerElementWidth);
+}
+
+@media screen and (max-width: 1200px) {
+	.aboutme-bio-top {
+		flex-direction: column;
+	}
+	.portrait-img {
+		margin: 0 auto;
+	}
+}
+.aboutme-bio-top {
+	display: flex;
+	gap: 1.5rem;
+}
+.portrait-img {
+	max-width: min(500px, 100%);
+	object-fit: contain;
+	height: auto;
+	border-radius: var(--roundedLarge);
+	transition: box-shadow 0.3s ease;
+}
+.theme-dark .portrait-img {
+	box-shadow: 50px 30px 60px -30px rgba(var(--primaryColor2), 0.3);
 }
