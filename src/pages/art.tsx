@@ -29,7 +29,7 @@ const ArtPage = () => {
 				<img src={icon} alt='Art' className='page-hero-icon' />
 				<img src={theme === 'light'? graphic3Light : graphic3Dark} alt='graphic' className='page-hero-graphic' />
 				<h1 className='page-hero-title'>
-					<span className='page-hero-title-muted'>msh~$</span>
+					<span className='page-hero-title-muted'>msh:~$</span>
 					Art
 				</h1>
 			</div>

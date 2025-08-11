@@ -152,7 +152,7 @@ const Homepage = () => {
 				<img src={homeIcon} alt='Bio' className='page-hero-icon' />
 				<img src={theme === 'light'? graphic3Light : graphic3Dark} alt='graphic' className='page-hero-graphic' />
 				<h1 className='page-hero-title'>
-					<span className='page-hero-title-muted'>msh~$</span>About Me
+					<span className='page-hero-title-muted'>msh:~$</span>About Me
 				</h1>
 				<p className='aboutme-main-desc'>
 					A bit about my interests, goals, and random fun things...
@@ -163,11 +163,11 @@ const Homepage = () => {
 	
 			<div className='section-medium section-bottom aboutme-bio-top'>
 				<div>
-					<h2>Yoey!</h2>
+					<h2>hi hello</h2>
 					<p className='text-muted'>
-						I'm Michael Sheng, currently in my first year studying CS @ Georgia Tech. I'm passionate about full-stack web development, 
+						I'm Michael Sheng, currently in my second year studying CS @ Georgia Tech. I'm passionate about full-stack web development, 
 						AI (specifically reinforcement learning and reasoning), and I've recently been exploring computational neuroscience
-						at the Rahnev Lab here at GT. On the personal side, I love drawing, walking, trading (securities), cats,&nbsp;
+						at the Rahnev Lab here at GT. On the personal side, I love drawing, walking, trading, cats,&nbsp;
 						<span className='text-muted-2'>cats,</span>&nbsp;
 						<span className='text-muted-3'>cats,</span>&nbsp;
 						<span className='text-muted-4'>and cats...</span>&nbsp;

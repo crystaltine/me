@@ -51,7 +51,7 @@ const ResumePage = () => {
 				<img src={icon} alt='Resume' className='page-hero-icon' />
 				<img src={theme === 'light'? graphic2Light : graphic2Dark} alt='graphic' className='page-hero-graphic' />
 				<h1 className='page-hero-title'>
-					<span className='page-hero-title-muted'>msh~$</span>
+					<span className='page-hero-title-muted'>msh:~$</span>
 					Resume
 				</h1>
 				<div className='resume-main-desc'>Thank you for your interest! Get a copy of my current resume below:</div>

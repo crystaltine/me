@@ -1,5 +1,14 @@
 [
 	{
+		"title": "Graphling",
+		"desc": "First-person Level-of-Detail 3D Graphing Calculator",
+		"tags": ["cpp", "glsl", "graphics", "threejs", "typescript"],
+		"image": "graphling_preview",
+		"links": {
+			"Github": "https://Github.com/crystaltine/graphling"
+		}
+	},
+	{
 		"title": "Pixelterm",
 		"desc": "Terminal/ASCII Graphics Rendering Library",
 		"tags": ["python", "graphics", "frameworks", "numpy", "git"],

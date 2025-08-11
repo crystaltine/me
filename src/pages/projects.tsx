@@ -35,7 +35,7 @@ const ProjectsPage = () => {
 				<img src={icon} alt='Projects' className='page-hero-icon' />
 				<img src={theme === 'light'? graphic4Light : graphic4Dark} alt='graphic' className='page-hero-graphic' />
 				<h1 className='page-hero-title'>
-					<span className='page-hero-title-muted'>msh~$</span>
+					<span className='page-hero-title-muted'>msh:~$</span>
 					Projects
 				</h1>
 

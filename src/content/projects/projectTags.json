@@ -35,12 +35,12 @@
     "icon": "pytorch.png"
   },
 	"full-stack": {
-    "name": "Full-Stack Dev",
+    "name": "Full-Stack",
     "color": "#ba00c0",
     "icon": "full-stack.png"
   },
 	"sql-server": {
-    "name": "MS SQL Server",
+    "name": "SQL Server",
     "color": "#0b00a2",
     "icon": "mssql.png"
   },
@@ -93,5 +93,20 @@
     "name": "Research",
     "color": "#ff8c00",
     "icon": "research.png"
+  },
+  "cpp": {
+    "name": "C++",
+    "color": "#2d588a",
+    "icon": "cpp.png"
+  },
+  "threejs": {
+    "name": "Three.js",
+    "color": "#c6e2dd",
+    "icon": "threejs.png"
+  },
+  "glsl": {
+    "name": "GLSL (OpenGL)",
+    "color": "#1e1e1e",
+    "icon": "glsl.png"
   }
 }

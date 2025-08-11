@@ -30,7 +30,7 @@ const ExperiencePage = () => {
 				<img src={experienceIcon} alt='Experience' className='page-hero-icon' />
 				<img src={theme === 'light'? graphic5Light : graphic5Dark} alt='graphic' className='page-hero-graphic' />
 				<h1 className='page-hero-title'>
-					<span className='page-hero-title-muted'>msh~$</span>Experience
+					<span className='page-hero-title-muted'>msh:~$</span>Experience
 				</h1>
 
 				<p className='experience-main-desc'>
