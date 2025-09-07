@@ -16,7 +16,7 @@ import experienceIcon from '../assets/page_icons/experience-icon.png';
 import resumeIcon from '../assets/page_icons/resume-icon.png';
 import { useTheme } from '../themeHook';
 
-import portraitImg from '../assets/portrait.jpeg';
+import portraitImg from '../assets/portrait.jpg';
 import { A } from '../a';
 
 const TITLE_BLINK_INTERVAL = 3; // seconds
@@ -103,7 +103,11 @@ const Homepage = () => {
 								{titleIndexToShow !== 0 && ALTERNATE_TITLES[titleIndexToShow - 1](cachedMaintextSize, maintext1Ref)}
 
 								<p className='hero-faded-col'><span className='font-semibold'>B.S. Computer Science</span> @ Georgia Tech</p>
-								<p className='hero-faded-col'>Learning Rust &#183; <span className="text-red-500">&#10084;</span> Webdev &#183; <span className="text-red-500">&#10084;</span> Design</p>
+								<p className='hero-faded-col'>
+									<span className="text-red-500">&#10084;</span> Full-Stack &#183; 
+									<span className="text-red-500">&#10084;</span> AI & RL &#183; 
+									<span className="text-red-500">&#10084;</span> Graphics & 3D
+								</p>
 							</div>
 						</div>
 
@@ -163,22 +167,25 @@ const Homepage = () => {
 	
 			<div className='section-medium section-bottom aboutme-bio-top'>
 				<div>
-					<h2>hi hello</h2>
+					<h2>Hi, Hello!</h2>
 					<p className='text-muted'>
-						I'm Michael Sheng, currently in my second year studying CS @ Georgia Tech. I'm passionate about full-stack web development, 
-						AI (specifically reinforcement learning and reasoning), and I've recently been exploring computational neuroscience
-						at the Rahnev Lab here at GT. On the personal side, I love drawing, walking, trading, cats,&nbsp;
+						I'm Michael Sheng, currently in my second year studying CS @ Georgia Tech. I'm very well-versed in full-stack and especially frontend development, 
+						and I love working on software applications in general. I also love working on graphics projects (currently  
+						building <a href="https://Github.com/crystaltine/graphling" target='_blank' rel="noopener noreferrer">Graphling</a>). 
+						Additionally, I'm interested in research in decision-making AI and Reinforcement learning,
+						and I'm currently exploring computational neuroscience at modeling human perception the Rahnev Lab here at GT. 
+						On the personal side, I love drawing, speedrunning video games, walking, trading stocks, cats,&nbsp;
 						<span className='text-muted-2'>cats,</span>&nbsp;
 						<span className='text-muted-3'>cats,</span>&nbsp;
 						<span className='text-muted-4'>and cats...</span>&nbsp;
 						<br /><br />
-						Alongside being an RA at Rahnev, I'm working part-time as an assistant in our College of Sciences' IT/Web
-						services department, and as a software dev at <a href="https://hexlabs.org">Hexlabs</a>. 
-						I'm also open for work during the summer and would love to get in touch! Check out the bottom of the page 
-						or my resume for contact info if you're interested.
+						Alongside being an RA at Rahnev, I recently completed a software engineering internship at
+						at <a href='https://carbon3d.com' target='_blank' rel='noopener noreferrer'>Carbon</a>,
+						where I worked on a full-stack system for a new 3D printing post-processing machine. It was a truly 
+						amazing experience and I learned so much working on the most diverse and multidisciplinary team I've 
+						ever been a part of!
 						<br /><br />
-						Anyway, thanks for checking out my site! Feel free to explore my projects, experiences, and resume.
-						I hope you find what you're looking for!
+						Thanks for checking out my site. Feel free to explore my projects, experiences, and resume!
 					</p>
 				</div>
 				<img src={portraitImg} alt='Portrait' className='portrait-img' />
