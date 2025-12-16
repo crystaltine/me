@@ -80,7 +80,7 @@
 /* "glass frame" around .homepage-hero-1 */
 .homepage-hero-1-blur {
 	padding: 8px;
-	border-radius: calc(var(--roundedXL) + 8px);
+	border-radius: calc(var(--roundedXL));
 	border: 1px solid rgba(var(--secondaryColor0), 0.3);
 	backdrop-filter: blur(20px);
 	transition: box-shadow 0.3s;
@@ -91,8 +91,8 @@
 	box-shadow: 
 	0 -30px 10px -30px rgba(202, 195, 255, 0.9) inset, 
 	0 60px 20px -60px rgba(202, 195, 255, 0.9), 
-	0 -20px 50px -20px rgba(132, 0, 255, 0.9) inset,
-	0 40px 100px -40px rgba(132, 0, 255, 0.9);
+	0 -20px 50px -20px rgba(208 0 255 / 0.9) inset,
+	0 40px 100px -40px rgba(220 41 113 / 0.9);
 }
 .homepage-hero-1 {
 	position: relative;
@@ -119,9 +119,7 @@
 		rgba(var(--primaryColor0), 0.04) 100%
 	);
 	
-	border-image: linear-gradient(90deg, transparent 10%, rgba(var(--secondaryColor0), 1), transparent 90%) 1;
-  border-width: 1px;
-  border-style: solid;
+	border: 1px solid #fff1;
 }
 
 .homepage-hero-2 {
@@ -154,7 +152,7 @@
 }
 .homepage-hero-2-blur {
 	padding: 8px;
-	border-radius: calc(var(--roundedXL) + 8px);
+	border-radius: calc(var(--roundedXL));
 	border: 1px solid rgba(var(--secondaryColor0), 0.3);
 	transition: box-shadow 0.3s;
 	backdrop-filter: blur(20px);
@@ -291,7 +289,7 @@
 .portrait-img {
 	max-width: min(400px, 90%);
 	object-fit: contain;
-	height: auto;
+	height: fit-content;
 	border-radius: var(--roundedLarge);
 	transition: box-shadow 0.3s ease;
 }

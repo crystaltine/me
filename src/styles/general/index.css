@@ -14,10 +14,10 @@ body {
   --paragraphFont: "Figtree", "Inter", "Work Sans", "Open Sans", system-ui, sans-serif;
   --codeFont: "Roboto Mono", Consolas, monospace;
 
-  --roundedSmall: 5px;
-  --roundedMedium: min(2vmin, 8px);
-  --roundedLarge: 10px;
-  --roundedXL: 15px;
+  --roundedSmall: 2px;
+  --roundedMedium: min(0.75vmin, 3px);
+  --roundedLarge: 4px;
+  --roundedXL: 6px;
 }
 
 /* Main dark theme colors - look in other files menubar.css for other colors */

@@ -104,9 +104,7 @@ const Homepage = () => {
 
 								<p className='hero-faded-col'><span className='font-semibold'>B.S. Computer Science</span> @ Georgia Tech</p>
 								<p className='hero-faded-col'>
-									<span className="text-red-500">&#10084;</span> Full-Stack &#183; 
-									<span className="text-red-500">&#10084;</span> AI & RL &#183; 
-									<span className="text-red-500">&#10084;</span> Graphics & 3D
+									<span className="text-red-500">&#10084;</span> Fullstack, Graphics, Trading
 								</p>
 							</div>
 						</div>
@@ -167,23 +165,26 @@ const Homepage = () => {
 	
 			<div className='section-medium section-bottom aboutme-bio-top'>
 				<div>
-					<h2>Hi, Hello!</h2>
+					<h2>Hey there!</h2>
 					<p className='text-muted'>
-						I'm Michael Sheng, currently in my second year studying CS @ Georgia Tech. I'm very well-versed in full-stack and especially frontend development, 
+						I'm Michael Sheng, currently in my second year studying CS @ Georgia Tech. I'm experienced in full-stack and especially frontend development, 
 						and I love working on software applications in general. I also love working on graphics projects (currently  
 						building <a href="https://Github.com/crystaltine/graphling" target='_blank' rel="noopener noreferrer">Graphling</a>). 
 						Additionally, I'm interested in research in decision-making AI and Reinforcement learning,
-						and I'm currently exploring computational neuroscience at modeling human perception the Rahnev Lab here at GT. 
-						On the personal side, I love drawing, speedrunning video games, walking, trading stocks, cats,&nbsp;
-						<span className='text-muted-2'>cats,</span>&nbsp;
-						<span className='text-muted-3'>cats,</span>&nbsp;
-						<span className='text-muted-4'>and cats...</span>&nbsp;
+						and I'm currently working on human perception modeling at the Rahnev Lab here at GT. 
+						On the personal side, I love drawing, speedrunning, walking, trading stocks, and writing game AI!
 						<br /><br />
 						Alongside being an RA at Rahnev, I recently completed a software engineering internship at
 						at <a href='https://carbon3d.com' target='_blank' rel='noopener noreferrer'>Carbon</a>,
 						where I worked on a full-stack system for a new 3D printing post-processing machine. It was a truly 
 						amazing experience and I learned so much working on the most diverse and multidisciplinary team I've 
-						ever been a part of!
+						ever been a part of.
+						<br /><br />
+						I'm now co-directing the technology team for HackGT 13, Georgia Tech's premier student-run hackathon! Last year we had over 1,200 participants
+						and I'm excited to make next year even better.
+						<br /><br />
+						I'm also a developer and frontend lead at <a href="https://bytefight.org">ByteFight</a>, Georgia Tech's largest AI competition.
+						We hold monthlong programming competitions where players submit game-playing agents and compete on a leaderboard with intense tournaments and cash prizes!
 						<br /><br />
 						Thanks for checking out my site. Feel free to explore my projects, experiences, and resume!
 					</p>

@@ -1,15 +1,8 @@
 import React from "react";
+import { SiteTheme, ThemeContext } from "./themeHook";
 
 const DEFAULT_THEME = "dark";
 
-type SiteTheme = 'light' | 'dark';
-
-export interface ThemeContextProps {
-  theme: SiteTheme;
-  toggleTheme: () => void;
-}
-
-export const ThemeContext = React.createContext<ThemeContextProps | undefined>(undefined);
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = React.useState<SiteTheme>(DEFAULT_THEME);
   React.useEffect(() => {

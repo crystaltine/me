@@ -1,5 +1,13 @@
 import React from "react";
-import { ThemeContext } from "./theme";
+
+export type SiteTheme = 'light' | 'dark';
+
+export interface ThemeContextProps {
+	theme: SiteTheme;
+	toggleTheme: () => void;
+}
+
+export const ThemeContext = React.createContext<ThemeContextProps | undefined>(undefined);
 
 export const useTheme = () => {
   const context = React.useContext(ThemeContext);
