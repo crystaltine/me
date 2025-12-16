@@ -1,5 +1,38 @@
 [
 	{
+		"sectionId": "lead-bytefight",
+		"title": "ByteFight",
+		"role": "Frontend Lead",
+		"dates": "Sep. 2025 - Present",
+		"location": "Atlanta, GA",
+		"tags": ["typescript", "react", "full-stack", "ux", "ui"],
+		"overview": "I'm on the leadership team as the frontend director for ByteFight, a student-run AI competition at Georgia Tech! We are a monthlong competitive programming event where students submit AI agents to battle each other on a leaderboard, with a rating system, intense esports-style tournaments, and cash prizes! Inspired by MIT's Battlecode Competition, ByteFight aims to provide students with an amazingly fun and engaging opportunity to learn about strategic thinking, algorithms, and decision-making AI.",
+		"descFile": "lead-bytefight",
+		"image": "lead-bytefight"
+	},
+	{
+		"sectionId": "intern-carbon",
+		"title": "Carbon, Inc.",
+		"role": "Software Engineering Intern",
+		"dates": "Jun. 2025 - Aug. 2025",
+		"location": "Redwood City, CA",
+		"tags": ["typescript", "react", "full-stack", "ux", "ui"],
+		"overview": "Worked at Carbon as a Software Engineer Intern for summer 2025 on a new industrial 3D printing post-processing machine. I completed several user flows for the frontscreen UI, and handled on-machine server logic and networking with various components of Carbon's ecosystem, from hardware interfaces to Carbon's cloud services.",
+		"descFile": "intern-carbon",
+		"image": "intern-carbon"
+	},
+	{
+		"sectionId": "director-hexlabs",
+		"title": "Hexlabs (HackGT)",
+		"role": "Co-Director of Technology",
+		"dates": "Oct. 2025 - Present",
+		"location": "Atlanta, GA",
+		"tags": ["typescript", "react", "full-stack", "ux", "ui"],
+		"overview": "Co-directing software development at Hexlabs for the 2026 HackGT 13 season! I was a member of the technology team for the HackGT 12 season and I'm honored to have been selected to lead the team for the upcoming year! I built many features for Hexlabs' hackathon platform, including on the judging platform and registration portal, and also created frontends for the HackGT 12 main site, HackGT Archive, and Live Event Site.",
+		"descFile": "director-hexlabs",
+		"image": "director-hexlabs"
+	},
+	{
 		"sectionId": "research-lanl",
 		"title": "Los Alamos National Laboratory",
 		"role": "Research Intern",
