@@ -24,6 +24,7 @@
 	.homepage-hero-img {
 		margin: 0 auto;
 		right: 50%;
+		transform: translateX(50%);
 		animation: spin-forever-compact 90s linear infinite, hero-img-appear 0.9s ease !important;
 		animation-fill-mode: both !important;
 		transform-origin: 100% 50%;
