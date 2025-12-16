@@ -42,6 +42,36 @@
 	}
 }
 
+@keyframes spin-forever {
+	0% {
+		transform: rotate(0deg);
+		filter: brightness(1);
+	}
+	50% {
+		filter: brightness(1.25);
+	}
+	100% {
+		transform: rotate(360deg);
+		filter: brightness(1);
+	}
+}
+
+/* small screen translation factored in */
+@keyframes spin-forever-compact {
+	0% {
+		transform: rotate(0deg) translateX(50%);
+		filter: brightness(1);
+	}
+	50% {
+		transform: rotate(180deg) translateX(50%);
+		filter: brightness(1.25);
+	}
+	100% {
+		transform: rotate(360deg) translateX(50%);
+		filter: brightness(1);
+	}
+}
+
 :root {
 	background-color: rgb(var(--backgroundColor0));
 }
@@ -65,7 +95,7 @@
 	position: absolute;
 	right: 0;
 	max-height: 100%;
-	animation: hero-img-right-flyin 0.9s ease;
+	animation: hero-img-right-flyin 0.9s ease, spin-forever 90s linear infinite;
 	animation-fill-mode: both;
 }
 
